@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Договор публичной оферты — Krovlya-K</title>
+  <meta name="description" content="Договор публичной оферты компании Krovlya-K на оказание услуг по монтажу и ремонту плоских кровель.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --or-500: #f97316;
+      --or-600: #ea580c;
+      --or-400: #ff9c38;
+      --or-300: #ffbc6a;
+      --or-50:  #fff8ed;
+      --or-200: #ffd9a5;
+      --gray-900: #1c1917;
+      --gray-800: #292524;
+      --gray-700: #44403c;
+      --gray-600: #57534e;
+      --gray-500: #78716c;
+      --gray-400: #a8a29e;
+      --gray-200: #e7e5e4;
+      --gray-100: #f5f5f4;
+      --gray-50:  #fafaf9;
+      --white:    #ffffff;
+      --font-main: 'Geologica', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+    a { color: var(--or-600); text-decoration: underline; }
+    a:hover { color: var(--or-500); }
+
+    /* HEADER */
+    .doc-header {
+      background: var(--gray-900);
+      padding: 16px 0;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .doc-header-inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .doc-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .doc-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #f97316, #c2410c);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .doc-logo-name { font-family: var(--font-main); font-size: 18px; font-weight: 800; color: var(--white); }
+    .doc-back { font-size: 14px; font-weight: 600; color: var(--gray-400); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .doc-back:hover { color: var(--white); }
+
+    /* HERO */
+    .doc-hero { background: var(--gray-100); border-bottom: 2px solid var(--gray-200); padding: 48px 24px; text-align: center; }
+    .doc-hero-tag { display: inline-block; background: var(--or-50); color: var(--or-600); border: 1px solid var(--or-200); font-family: var(--font-main); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 16px; }
+    .doc-hero h1 { font-family: var(--font-main); font-size: clamp(22px, 4vw, 34px); font-weight: 900; color: var(--gray-900); letter-spacing: -0.025em; margin-bottom: 12px; }
+    .doc-hero-meta { font-size: 14px; color: var(--gray-500); }
+
+    /* CONTENT */
+    .doc-content { max-width: 900px; margin: 0 auto; padding: 56px 24px 80px; }
+    .doc-toc { background: var(--gray-50); border: 1.5px solid var(--gray-200); border-left: 4px solid var(--or-500); border-radius: 10px; padding: 24px 28px; margin-bottom: 48px; }
+    .doc-toc h2 { font-family: var(--font-main); font-size: 14px; font-weight: 700; color: var(--gray-700); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 16px; }
+    .doc-toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .doc-toc a { font-size: 14px; color: var(--or-600); font-weight: 500; text-decoration: none; }
+    .doc-toc a:hover { text-decoration: underline; }
+
+    .doc-section { margin-bottom: 48px; }
+    .doc-section h2 { font-family: var(--font-main); font-size: 20px; font-weight: 800; color: var(--gray-900); border-bottom: 2px solid var(--gray-200); padding-bottom: 10px; margin-bottom: 20px; scroll-margin-top: 80px; }
+    .doc-section h3 { font-family: var(--font-main); font-size: 16px; font-weight: 700; color: var(--gray-800); margin: 24px 0 10px; }
+    .doc-section p { font-size: 15px; color: var(--gray-700); margin-bottom: 14px; line-height: 1.75; }
+    .doc-section ul, .doc-section ol { padding-left: 24px; margin-bottom: 16px; }
+    .doc-section li { font-size: 15px; color: var(--gray-700); margin-bottom: 8px; line-height: 1.65; }
+    .doc-section ul li::marker { color: var(--or-500); }
+    .doc-section table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .doc-section th { background: var(--gray-100); font-family: var(--font-main); font-weight: 700; color: var(--gray-700); padding: 10px 14px; text-align: left; border: 1px solid var(--gray-200); }
+    .doc-section td { padding: 10px 14px; border: 1px solid var(--gray-200); color: var(--gray-700); vertical-align: top; }
+    .doc-section tr:nth-child(even) td { background: var(--gray-50); }
+    .doc-highlight { background: var(--or-50); border-left: 4px solid var(--or-500); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; font-size: 14px; color: var(--gray-700); line-height: 1.65; }
+
+    /* FOOTER */
+    .doc-footer { background: var(--gray-900); color: var(--gray-400); text-align: center; padding: 32px 24px; font-size: 13px; }
+    .doc-footer a { color: var(--or-400); text-decoration: none; }
+    .doc-footer a:hover { color: var(--or-300); }
+
+    @media (max-width: 600px) {
+      .doc-hero { padding: 32px 16px; }
+      .doc-content { padding: 32px 16px 60px; }
+      .doc-toc { padding: 16px 18px; }
+      .doc-section h2 { font-size: 18px; }
+      .doc-section table { font-size: 13px; }
+      .doc-section th, .doc-section td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="doc-header">
+    <div class="doc-header-inner">
+      <a href="index.html" class="doc-logo">
+        <div class="doc-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 40 40" fill="none">
+            <rect x="6" y="13" width="28" height="4" rx="1" fill="white"/>
+            <rect x="6" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+            <rect x="30" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+            <rect x="8" y="17" width="24" height="12" rx="1" fill="white" opacity="0.9"/>
+            <rect x="17" y="22" width="6" height="7" rx="1" fill="#f97316"/>
+            <rect x="10" y="20" width="5" height="4" rx="0.5" fill="#f97316" opacity="0.7"/>
+            <rect x="25" y="20" width="5" height="4" rx="0.5" fill="#f97316" opacity="0.7"/>
+          </svg>
+        </div>
+        <span class="doc-logo-name">Krovlya-K</span>
+      </a>
+      <a href="index.html" class="doc-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+        На главную
+      </a>
+    </div>
+  </header>
+
+  <div class="doc-hero">
+    <div class="doc-hero-tag">Юридический документ</div>
+    <h1>Договор публичной оферты</h1>
+    <p class="doc-hero-meta">Версия 1.0 &nbsp;·&nbsp; Дата публикации: 01 января 2025 г.</p>
+  </div>
+
+  <div class="doc-content">
+
+    <div class="doc-toc">
+      <h2>Содержание</h2>
+      <ol>
+        <li><a href="#o1">Термины и определения</a></li>
+        <li><a href="#o2">Предмет оферты</a></li>
+        <li><a href="#o3">Акцепт оферты</a></li>
+        <li><a href="#o4">Стоимость и порядок оплаты</a></li>
+        <li><a href="#o5">Права и обязанности сторон</a></li>
+        <li><a href="#o6">Порядок выполнения работ</a></li>
+        <li><a href="#o7">Гарантийные обязательства</a></li>
+        <li><a href="#o8">Ответственность сторон</a></li>
+        <li><a href="#o9">Порядок разрешения споров</a></li>
+        <li><a href="#o10">Форс-мажор</a></li>
+        <li><a href="#o11">Изменение и расторжение оферты</a></li>
+        <li><a href="#o12">Реквизиты и контакты</a></li>
+      </ol>
+    </div>
+
+    <div class="doc-highlight">
+      Настоящий документ является публичной офертой ООО «Кровля-К» (далее — Исполнитель) в соответствии со ст. 437 Гражданского кодекса Российской Федерации. Оформление заявки через Сайт, отправка запроса по телефону или электронной почте является безоговорочным акцептом настоящей оферты.
+    </div>
+
+    <div class="doc-section" id="o1">
+      <h2>1. Термины и определения</h2>
+      <p>В настоящем Договоре используются следующие термины:</p>
+      <ul>
+        <li><strong>Оферта</strong> — настоящий документ, опубликованный на Сайте Исполнителя</li>
+        <li><strong>Акцепт</strong> — полное и безоговорочное принятие условий Оферты путём направления заявки</li>
+        <li><strong>Заказчик</strong> — физическое или юридическое лицо, разместившее заявку на оказание Услуг</li>
+        <li><strong>Исполнитель</strong> — ООО «Кровля-К», осуществляющее монтаж и ремонт плоских кровель</li>
+        <li><strong>Услуги</strong> — работы по монтажу, ремонту, диагностике и обслуживанию плоских кровель</li>
+        <li><strong>Объект</strong> — здание или сооружение, на котором выполняются Услуги</li>
+        <li><strong>Смета</strong> — документ, определяющий стоимость и перечень Услуг для конкретного Объекта</li>
+        <li><strong>Сайт</strong> — веб-сайт Исполнителя в сети Интернет</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="o2">
+      <h2>2. Предмет оферты</h2>
+      <p>Исполнитель обязуется по заданию Заказчика оказать следующие виды услуг:</p>
+      <ul>
+        <li>Монтаж плоской кровли «под ключ» (неэксплуатируемая, эксплуатируемая, инверсионная, зелёная кровля)</li>
+        <li>Ремонт и восстановление плоской кровли (текущий и капитальный ремонт)</li>
+        <li>Устройство эксплуатируемых кровель и крышных террас</li>
+        <li>Диагностика и обследование кровельного покрытия</li>
+        <li>Гарантийное и постгарантийное обслуживание</li>
+        <li>Консультирование по вопросам выбора материалов и конструктивных решений</li>
+      </ul>
+      <p>Конкретный перечень, объём и стоимость Услуг определяются Сметой, согласованной с Заказчиком до начала работ.</p>
+    </div>
+
+    <div class="doc-section" id="o3">
+      <h2>3. Акцепт оферты</h2>
+      <p>Акцептом настоящей Оферты считается совершение Заказчиком любого из следующих действий:</p>
+      <ul>
+        <li>Отправка заявки через форму на Сайте</li>
+        <li>Направление запроса на электронную почту Исполнителя</li>
+        <li>Обращение по телефону с целью заказа Услуг</li>
+        <li>Подписание двустороннего договора на основании настоящей Оферты</li>
+        <li>Внесение аванса (предоплаты) в соответствии с выставленным счётом</li>
+      </ul>
+      <p>С момента Акцепта Договор считается заключённым на условиях настоящей Оферты.</p>
+      <div class="doc-highlight">
+        Заказчик, совершая Акцепт, подтверждает, что ознакомлен с условиями Оферты, согласен с ними и обладает полной дееспособностью для заключения договора.
+      </div>
+    </div>
+
+    <div class="doc-section" id="o4">
+      <h2>4. Стоимость и порядок оплаты</h2>
+      <p>Стоимость Услуг определяется индивидуально для каждого Объекта на основании осмотра и расчёта Сметы.</p>
+      <h3>Ориентировочные расценки</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Вид работ</th>
+            <th>Стоимость</th>
+            <th>Примечание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Монтаж кровельного пирога</td>
+            <td>от 1 200 ₽/м²</td>
+            <td>Включая материалы партнёров</td>
+          </tr>
+          <tr>
+            <td>Ремонт мягкой кровли</td>
+            <td>от 800 ₽/м²</td>
+            <td>Зависит от площади и состояния</td>
+          </tr>
+          <tr>
+            <td>Эксплуатируемая терраса</td>
+            <td>от 3 500 ₽/м²</td>
+            <td>Под финишное покрытие</td>
+          </tr>
+          <tr>
+            <td>Диагностика кровли</td>
+            <td>от 5 000 ₽</td>
+            <td>Включает письменный отчёт</td>
+          </tr>
+          <tr>
+            <td>Гарантийный выезд</td>
+            <td>Бесплатно</td>
+            <td>В течение гарантийного срока</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Порядок оплаты</h3>
+      <ul>
+        <li><strong>Аванс:</strong> 30–50% от стоимости Услуг до начала работ (для заказов свыше 100 000 ₽)</li>
+        <li><strong>Промежуточные платежи:</strong> по этапам согласно Смете (для крупных объектов)</li>
+        <li><strong>Окончательный расчёт:</strong> в течение 3 рабочих дней после подписания Акта выполненных работ</li>
+      </ul>
+      <p>Оплата производится наличными, банковским переводом или картой. Все платежи осуществляются в российских рублях.</p>
+    </div>
+
+    <div class="doc-section" id="o5">
+      <h2>5. Права и обязанности сторон</h2>
+      <h3>5.1. Обязанности Исполнителя</h3>
+      <ul>
+        <li>Выполнить Услуги качественно и в согласованные сроки</li>
+        <li>Использовать материалы надлежащего качества с действующими сертификатами</li>
+        <li>Соблюдать требования технических регламентов, строительных норм и правил</li>
+        <li>Информировать Заказчика об изменениях в ходе выполнения работ</li>
+        <li>Обеспечить безопасность проведения работ</li>
+        <li>Вывезти строительный мусор по завершении работ</li>
+        <li>Предоставить Акт выполненных работ и гарантийный документ</li>
+      </ul>
+      <h3>5.2. Обязанности Заказчика</h3>
+      <ul>
+        <li>Своевременно оплачивать Услуги согласно Смете</li>
+        <li>Обеспечить доступ специалистов Исполнителя к Объекту</li>
+        <li>Предоставить достоверную информацию об Объекте, необходимую для расчёта Сметы</li>
+        <li>Подписать Акт выполненных работ или представить мотивированные возражения в течение 3 рабочих дней</li>
+        <li>Соблюдать рекомендации Исполнителя по эксплуатации кровли</li>
+      </ul>
+      <h3>5.3. Права Исполнителя</h3>
+      <ul>
+        <li>Привлекать субподрядчиков без согласования с Заказчиком, оставаясь ответственным за качество</li>
+        <li>Приостановить работы при наступлении форс-мажорных обстоятельств</li>
+        <li>Требовать оплаты фактически выполненных работ при досрочном расторжении договора по инициативе Заказчика</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="o6">
+      <h2>6. Порядок выполнения работ</h2>
+      <ol>
+        <li><strong>Заявка</strong> — Заказчик оставляет заявку на Сайте или по телефону</li>
+        <li><strong>Выезд и осмотр</strong> — специалист выезжает на Объект в течение 1–3 рабочих дней</li>
+        <li><strong>Смета</strong> — в течение 1–3 рабочих дней после осмотра составляется и согласовывается Смета</li>
+        <li><strong>Договор и аванс</strong> — подписывается договор, вносится авансовый платёж</li>
+        <li><strong>Выполнение работ</strong> — в сроки, указанные в Смете (как правило, от 3 до 30 рабочих дней)</li>
+        <li><strong>Сдача объекта</strong> — подписание Акта выполненных работ и передача гарантийного документа</li>
+        <li><strong>Окончательный расчёт</strong> — в течение 3 рабочих дней после подписания Акта</li>
+      </ol>
+    </div>
+
+    <div class="doc-section" id="o7">
+      <h2>7. Гарантийные обязательства</h2>
+      <p>Исполнитель предоставляет гарантию на выполненные работы и применённые материалы:</p>
+      <table>
+        <thead>
+          <tr><th>Вид работ</th><th>Гарантийный срок</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Монтаж кровли (материалы ТехноНиколь)</td><td>10 лет</td></tr>
+          <tr><td>Монтаж кровли (прочие материалы)</td><td>5 лет</td></tr>
+          <tr><td>Ремонт кровли</td><td>3 года</td></tr>
+          <tr><td>Устройство терраса/эксплуатируемая кровля</td><td>5 лет</td></tr>
+          <tr><td>Диагностика и обследование</td><td>Не распространяется</td></tr>
+        </tbody>
+      </table>
+      <p>Гарантия распространяется на дефекты, возникшие по вине Исполнителя или вследствие применения некачественных материалов. Гарантия не распространяется на повреждения, возникшие в результате механического воздействия, стихийных бедствий, нарушения Заказчиком правил эксплуатации или выполнения работ третьими лицами.</p>
+      <p>Гарантийные работы выполняются в течение 10 рабочих дней с момента получения письменной претензии Заказчика.</p>
+    </div>
+
+    <div class="doc-section" id="o8">
+      <h2>8. Ответственность сторон</h2>
+      <p>За неисполнение или ненадлежащее исполнение обязательств по настоящему Договору стороны несут ответственность в соответствии с законодательством Российской Федерации.</p>
+      <ul>
+        <li>В случае нарушения Исполнителем сроков выполнения работ — пеня в размере 0,1% от стоимости просроченных работ за каждый день просрочки, но не более 5% от общей стоимости Услуг</li>
+        <li>В случае нарушения Заказчиком сроков оплаты — пеня в размере 0,1% от суммы задолженности за каждый день просрочки</li>
+        <li>Стороны освобождаются от ответственности за нарушение обязательств, если это произошло вследствие форс-мажорных обстоятельств</li>
+      </ul>
+      <p>Совокупная ответственность Исполнителя по настоящему Договору ограничена суммой оплаченных Заказчиком денежных средств за Услуги, повлёкшие возникновение ответственности.</p>
+    </div>
+
+    <div class="doc-section" id="o9">
+      <h2>9. Порядок разрешения споров</h2>
+      <p>Все споры и разногласия, возникающие из настоящего Договора или в связи с ним, разрешаются путём переговоров.</p>
+      <p>В случае невозможности урегулирования спора путём переговоров в течение 30 (тридцати) календарных дней с момента направления одной из сторон письменной претензии, спор передаётся на рассмотрение в суд по месту нахождения Исполнителя (г. Москва).</p>
+      <p>Для потребителей — физических лиц — споры рассматриваются в порядке, установленном Законом РФ от 07.02.1992 № 2300-1 «О защите прав потребителей».</p>
+    </div>
+
+    <div class="doc-section" id="o10">
+      <h2>10. Форс-мажор</h2>
+      <p>Стороны освобождаются от ответственности за частичное или полное неисполнение обязательств по настоящему Договору, если такое неисполнение явилось следствием обстоятельств непреодолимой силы (форс-мажор):</p>
+      <ul>
+        <li>Стихийные бедствия (наводнения, пожары, землетрясения, экстремальные погодные условия)</li>
+        <li>Действия государственных органов (введение ограничений, запретов)</li>
+        <li>Эпидемии, пандемии</li>
+        <li>Военные действия, террористические акты</li>
+        <li>Аварии на объектах инфраструктуры</li>
+      </ul>
+      <p>Сторона, для которой наступили обстоятельства форс-мажора, обязана уведомить другую сторону в течение 3 (трёх) рабочих дней.</p>
+      <p>Срок исполнения обязательств продлевается на период действия форс-мажорных обстоятельств.</p>
+    </div>
+
+    <div class="doc-section" id="o11">
+      <h2>11. Изменение и расторжение договора</h2>
+      <h3>11.1. Изменение условий оферты</h3>
+      <p>Исполнитель вправе в одностороннем порядке вносить изменения в настоящую Оферту. Изменения вступают в силу с момента их публикации на Сайте. Использование Сайта после публикации изменений означает согласие с новыми условиями.</p>
+      <h3>11.2. Расторжение по инициативе Заказчика</h3>
+      <p>Заказчик вправе расторгнуть Договор в одностороннем порядке, уведомив Исполнителя не менее чем за 3 рабочих дня. При этом:</p>
+      <ul>
+        <li>Если работы не начаты — возврат аванса в полном объёме</li>
+        <li>Если работы выполнены частично — оплата фактически выполненного объёма, возврат остатка аванса</li>
+        <li>Если работы выполнены полностью — оплата в полном объёме</li>
+      </ul>
+      <h3>11.3. Расторжение по инициативе Исполнителя</h3>
+      <p>Исполнитель вправе расторгнуть Договор при систематическом (более 2 раз) нарушении Заказчиком условий оплаты или при ненадлежащем обеспечении доступа к Объекту.</p>
+    </div>
+
+    <div class="doc-section" id="o12">
+      <h2>12. Реквизиты и контакты Исполнителя</h2>
+      <table>
+        <tbody>
+          <tr><td><strong>Организация</strong></td><td>ООО «Кровля-К»</td></tr>
+          <tr><td><strong>Адрес</strong></td><td>г. Москва, ул. Дмитровское шоссе, д. 157</td></tr>
+          <tr><td><strong>Телефон</strong></td><td><a href="tel:+79015760750">+7 901 576-07-50</a></td></tr>
+          <tr><td><strong>Email</strong></td><td><a href="mailto:info@krovlya-k.ru">info@krovlya-k.ru</a></td></tr>
+          <tr><td><strong>Сайт</strong></td><td>krovlya-k.ru</td></tr>
+          <tr><td><strong>Режим работы</strong></td><td>Пн–Пт: 9:00–19:00, Сб: 10:00–16:00</td></tr>
+        </tbody>
+      </table>
+      <p>Настоящий Договор публичной оферты вступает в силу с 01 января 2025 года и действует бессрочно до момента его отзыва Исполнителем.</p>
+    </div>
+
+  </div>
+
+  <footer class="doc-footer">
+    <p>© 2025 Krovlya-K &nbsp;·&nbsp; <a href="index.html">Главная</a> &nbsp;·&nbsp; <a href="privacy.html">Политика конфиденциальности</a></p>
+  </footer>
+
+</body>
+</html>

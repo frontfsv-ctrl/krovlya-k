@@ -1,713 +1,887 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Профессиональный ремонт и монтаж плоской кровли из ПВХ-мембраны в Москве и МО. Гарантия 7 лет, выезд в день обращения.">
-    <title>Ремонт плоской кровли в Москве | Монтаж ПВХ мембраны</title>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Krovlya-K — монтаж и ремонт плоских кровель в Москве и МО. Гарантия до 10 лет. Официальный партнёр ТехноНиколь. Работаем с частными домами, террасами и коммерческими объектами.">
+  <meta name="keywords" content="монтаж плоской кровли, ремонт плоской крыши, плоская кровля под ключ, эксплуатируемая кровля, неэксплуатируемая кровля, кровля Москва">
+  <meta property="og:title" content="Krovlya-K — монтаж и ремонт плоских кровель в Москве">
+  <meta property="og:description" content="Официальный партнёр ТехноНиколь. Монтируем плоскую кровлю с гарантией до 10 лет. Частные дома и террасы.">
+  <title>Krovlya-K — монтаж и ремонт плоских кровель в Москве и МО</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 01. Header -->
-    <header class="header js-header">
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">🏗</span>
-                <div class="logo-text">
-                    <strong>КРОВЛЯ ПРОФ</strong>
-                    <span>Ремонт и монтаж ПВХ</span>
-                </div>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-inner">
+          <div class="header-contacts">
+            <div class="phone-wrap">
+              <a href="tel:+79015760750" class="header-phone" id="header-phone">+7 901 576-07-50</a>
+              <button class="phone-copy-btn" id="phone-copy-btn" title="Скопировать номер" aria-label="Скопировать телефон">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span class="copy-tooltip" id="copy-tooltip">Скопировано!</span>
+              </button>
             </div>
-            
-            <nav class="nav">
-                <a href="#services">Услуги</a>
-                <a href="#prices">Цены</a>
-                <a href="#portfolio">Портфолио</a>
-                <a href="#reviews">Отзывы</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
-
-            <div class="header-contact">
-                <div class="phone-block">
-                    <a href="tel:+79015760750" class="phone">+7 (901) 576-07-50</a>
-                    <span class="phone-sub">Звоним в течение 15 минут</span>
-                </div>
-                <button class="btn btn-outline" onclick="document.getElementById('lead-form-2').scrollIntoView({behavior: 'smooth'})">Оставить заявку</button>
-            </div>
-            
-            <button class="mobile-menu-btn js-mobile-menu">
-                <span></span><span></span><span></span>
-            </button>
+            <span class="header-divider">|</span>
+            <a href="mailto:info@krovlya-k.ru" class="header-email">info@krovlya-k.ru</a>
+          </div>
+          <div class="header-badge">
+            <span class="badge-icon">✓</span>
+            <span>Официальный партнёр ТехноНиколь</span>
+          </div>
         </div>
-    </header>
-
-    <!-- 02. Hero -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
-            <!-- Placeholder for hero background -->
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text animate-fade-up">
-                <div class="hero-badge">Осталось 2 бригады на эту неделю — запишитесь сейчас</div>
-                <h1>Ремонт и монтаж плоской кровли из ПВХ-мембраны в Москве и МО</h1>
-                <p class="subtitle">Устраняем протечки и монтируем новую кровлю «под ключ» за 1–3 дня. Гарантия 7 лет. Выезд специалиста — бесплатно в день обращения.</p>
-                
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="icon">🏗</span>
-                        <span><strong>Более 500</strong> объектов</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="icon">📅</span>
-                        <span><strong>Выезд</strong> сегодня</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="icon">✅</span>
-                        <span><strong>Гарантия</strong> 7 лет</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="icon">📄</span>
-                        <span><strong>Договор</strong> и акты</span>
-                    </div>
-                </div>
-                
-                <div class="hero-trust">
-                    💬 «Принимаем объекты от 50 м². Работаем без выходных.»
-                </div>
-            </div>
-            
-            <div class="hero-form-wrapper animate-fade-up" style="animation-delay: 0.2s;">
-                <form class="lead-form glass-form">
-                    <h3>Получите расчёт стоимости бесплатно</h3>
-                    <p>Перезвоним за 15 минут. Выезд и замер — бесплатно.</p>
-                    
-                    <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="" disabled selected>Тип объекта</option>
-                            <option value="house">Жилой дом / Коттедж</option>
-                            <option value="mall">Торговый центр</option>
-                            <option value="warehouse">Склад / Производство</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Рассчитать стоимость</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 03. Pains Block -->
-    <section class="section pains" id="pains">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Что происходит с вашей кровлей?</h2>
-            
-            <div class="grid-3 pains-grid">
-                <div class="pain-card animate-fade-up">
-                    <div class="pain-icon">🌧</div>
-                    <h3>После каждого дождя — пятна на потолке</h3>
-                    <p>Вода проникает внутрь. Намокает утеплитель, разрушается перекрытие. Каждый месяц промедления увеличивает стоимость ремонта.</p>
-                </div>
-                <div class="pain-card animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="pain-icon">🔍</div>
-                    <h3>Не можете найти место протечки</h3>
-                    <p>Вода затекает в одном месте, а проявляется совсем в другом. Это не угадать без специального оборудования.</p>
-                </div>
-                <div class="pain-card animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="pain-icon">💸</div>
-                    <h3>Уже чинили — снова течёт</h3>
-                    <p>Локальная «заплатка» без диагностики даёт результат на 1–2 сезона. Проблема возвращается снова и снова.</p>
-                </div>
-                <div class="pain-card animate-fade-up" style="animation-delay: 0.3s;">
-                    <div class="pain-icon">🏗</div>
-                    <h3>Кровля пузырится, мембрана вздулась</h3>
-                    <p>Под покрытие попала влага. Если не устранить сейчас — мембрана расслоится по всей площади.</p>
-                </div>
-                <div class="pain-card animate-fade-up" style="animation-delay: 0.4s;">
-                    <div class="pain-icon">📅</div>
-                    <h3>Кровле 10–15 лет — пора задуматься</h3>
-                    <p>ПВХ-мембрана без ухода теряет эластичность. Микротрещины пока незаметны, но следующей зимой могут дать серьёзную течь.</p>
-                </div>
-                <div class="pain-card animate-fade-up" style="animation-delay: 0.5s;">
-                    <div class="pain-icon">🏢</div>
-                    <h3>Арендаторы жалуются</h3>
-                    <p>Протечка в коммерческом объекте — это претензии, штрафы и репутационные потери. Нужно решить проблему без остановки работы.</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4 animate-fade-up" style="animation-delay: 0.6s;">
-                <button class="btn btn-primary btn-lg" onclick="document.getElementById('lead-form-2').scrollIntoView({behavior: 'smooth'})">Записаться на бесплатный осмотр кровли →</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 04. Services (Tabs) -->
-    <section class="section services bg-light" id="services">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Что мы делаем</h2>
-            <p class="section-desc text-center animate-fade-up">Работаем с частными домами, коттеджными посёлками, многоквартирными домами, торговыми центрами, складами и производственными зданиями в Москве и МО.</p>
-            
-            <div class="tabs-container animate-fade-up">
-                <div class="tabs-nav" role="tablist">
-                    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-repair" id="btn-repair">Ремонт плоской кровли</button>
-                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-install" id="btn-install">Монтаж плоской кровли из ПВХ</button>
-                </div>
-                
-                <div class="tab-content active" id="tab-repair" role="tabpanel" aria-labelledby="btn-repair">
-                    <div class="tab-header">
-                        <h3>Устраняем любые повреждения ПВХ-мембраны — от точечных протечек до капитального восстановления</h3>
-                    </div>
-                    <div class="grid-3">
-                        <div class="service-card">
-                            <div class="card-badge">Аварийный</div>
-                            <h4>1. Латочный ремонт</h4>
-                            <p>Точечное устранение повреждений: проколов, порезов, разошедшихся швов. Подходит, если повреждено до 20% площади.</p>
-                            <ul class="service-meta">
-                                <li>⏱ Срок: 1 день</li>
-                                <li>💰 От 150 руб./м²</li>
-                            </ul>
-                        </div>
-                        <div class="service-card">
-                            <div class="card-badge">Косметический</div>
-                            <h4>2. Текущий ремонт</h4>
-                            <p>Обследование кровли, герметизация швов и примыканий, замена локальных участков мембраны. Проводится раз в 5 лет.</p>
-                            <ul class="service-meta">
-                                <li>⏱ Срок: 1–2 дня</li>
-                                <li>💰 От 350 руб./м²</li>
-                            </ul>
-                        </div>
-                        <div class="service-card">
-                            <div class="card-badge">Капитальный</div>
-                            <h4>3. Капитальный ремонт</h4>
-                            <p>Полный демонтаж старого покрытия, замена кровельного пирога. Гарантия 25–50 лет на покрытие.</p>
-                            <ul class="service-meta">
-                                <li>⏱ Срок: 3–7 дней</li>
-                                <li>💰 От 1 800 руб./м²</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tab-content" id="tab-install" role="tabpanel" aria-labelledby="btn-install" hidden>
-                    <div class="tab-header">
-                        <h3>Монтируем кровельный пирог «под ключ» — от проектирования до сдачи объекта с документами</h3>
-                    </div>
-                    <div class="install-grid">
-                        <div class="install-list">
-                            <h4>Что входит в монтаж:</h4>
-                            <ul>
-                                <li>Обследование основания и разработка решения</li>
-                                <li>Устройство пароизоляции</li>
-                                <li>Укладка теплоизоляции (Пеноплэкс, Rockwool)</li>
-                                <li>Укладка разделительного геотекстиля</li>
-                                <li>Монтаж ПВХ-мембраны методом горячей сварки</li>
-                                <li>Устройство примыканий к парапетам, воронкам</li>
-                                <li>Установка аэраторов и воронок</li>
-                                <li>Сдача объекта с актами скрытых работ</li>
-                            </ul>
-                        </div>
-                        <div class="install-info">
-                            <div class="info-box">
-                                <h4>Материалы:</h4>
-                                <p>Sikaplan · Bauder Thermofol · Fatrafol · ТехноНИКОЛЬ · ROCKmembrane</p>
-                            </div>
-                            <div class="info-box">
-                                <h4>Типы объектов:</h4>
-                                <p>Коттеджи, МКД, ТЦ и БЦ, Склады, Производства, Гаражи и паркинги</p>
-                            </div>
-                            <button class="btn btn-primary mt-2" onclick="document.getElementById('lead-form-2').scrollIntoView({behavior: 'smooth'})">Получить расчёт монтажа →</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 05. Advantages -->
-    <section class="section advantages">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Почему нам доверяют кровлю</h2>
-            
-            <div class="grid-3">
-                <div class="adv-card animate-fade-up">
-                    <div class="adv-number">12</div>
-                    <h4>Лет на рынке</h4>
-                    <p>Работаем на рынке кровельных работ в Москве и МО с 2012 года.</p>
-                </div>
-                <div class="adv-card animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="adv-number">7</div>
-                    <h4>Лет гарантии</h4>
-                    <p>Предоставляем гарантию на все виды ремонта и монтажа.</p>
-                </div>
-                <div class="adv-card animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="adv-number">500+</div>
-                    <h4>Объектов</h4>
-                    <p>От частных коттеджей до крупных производственных комплексов.</p>
-                </div>
-                <div class="adv-card animate-fade-up" style="animation-delay: 0.3s;">
-                    <div class="adv-icon">⏱</div>
-                    <h4>Выезд за 24 часа</h4>
-                    <p>Специалист приедет на ваш объект уже сегодня или завтра.</p>
-                </div>
-                <div class="adv-card animate-fade-up" style="animation-delay: 0.4s;">
-                    <div class="adv-icon">👷</div>
-                    <h4>Без посредников</h4>
-                    <p>Собственные бригады квалифицированных кровельщиков, не субподряд.</p>
-                </div>
-                <div class="adv-card animate-fade-up" style="animation-delay: 0.5s;">
-                    <div class="adv-icon">📦</div>
-                    <h4>Прямые поставки</h4>
-                    <p>Материалы от Sika, Bauder, ТехноНИКОЛЬ — цены без наценки дилера.</p>
-                </div>
-            </div>
-            
-            <div class="trust-banner mt-4 animate-fade-up" style="animation-delay: 0.6s;">
-                <p>Каждый объект фиксируется актами скрытых работ и дефектными ведомостями. Вы получаете полный пакет документов: договор, КС-2, КС-3, гарантийный паспорт.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 06. Steps -->
-    <section class="section steps bg-light">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Как проходит работа — от звонка до гарантии</h2>
-            
-            <div class="steps-grid">
-                <div class="step-item animate-fade-up">
-                    <div class="step-num">01</div>
-                    <div class="step-content">
-                        <h4>Заявка</h4>
-                        <p>Вы оставляете заявку. Менеджер перезванивает в течение 15 минут и уточняет детали.</p>
-                    </div>
-                </div>
-                <div class="step-item animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="step-num">02</div>
-                    <div class="step-content">
-                        <h4>Бесплатный выезд</h4>
-                        <p>Инженер проводит визуальный осмотр и инструментальную диагностику. Фиксирует повреждения.</p>
-                    </div>
-                </div>
-                <div class="step-item animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="step-num">03</div>
-                    <div class="step-content">
-                        <h4>Смета и договор</h4>
-                        <p>Вы получаете КП с перечнем работ. Заключаем договор с фиксированной ценой.</p>
-                    </div>
-                </div>
-                <div class="step-item animate-fade-up" style="animation-delay: 0.3s;">
-                    <div class="step-num">04</div>
-                    <div class="step-content">
-                        <h4>Закупка материалов</h4>
-                        <p>Закупаем сертифицированные материалы напрямую у производителей и доставляем.</p>
-                    </div>
-                </div>
-                <div class="step-item animate-fade-up" style="animation-delay: 0.4s;">
-                    <div class="step-num">05</div>
-                    <div class="step-content">
-                        <h4>Выполнение работ</h4>
-                        <p>Бригада выполняет работы в срок. Контроль качества мастером. Убираем мусор.</p>
-                    </div>
-                </div>
-                <div class="step-item animate-fade-up" style="animation-delay: 0.5s;">
-                    <div class="step-num">06</div>
-                    <div class="step-content">
-                        <h4>Сдача и гарантия</h4>
-                        <p>Совместная приёмка, подписание актов. Выдаём гарантийный паспорт на 7 лет.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 07. Pricing Table -->
-    <section class="section prices" id="prices">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Ориентировочные цены на кровельные работы</h2>
-            <p class="section-desc text-center animate-fade-up">Точная стоимость определяется после бесплатного осмотра объекта. Цена фиксируется в договоре.</p>
-            
-            <div class="table-responsive animate-fade-up">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Вид работы</th>
-                            <th>Ед.</th>
-                            <th>Цена</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td>Диагностика и поиск протечек</td><td>объект</td><td><strong>Бесплатно</strong></td></tr>
-                        <tr><td>2</td><td>Латочный (аварийный) ремонт ПВХ-мембраны</td><td>м²</td><td>от 150 ₽</td></tr>
-                        <tr><td>3</td><td>Текущий ремонт с герметизацией швов</td><td>м²</td><td>от 350 ₽</td></tr>
-                        <tr><td>4</td><td>Герметизация примыканий к парапетам</td><td>м.п.</td><td>от 250 ₽</td></tr>
-                        <tr><td>5</td><td>Устройство разделительного геотекстиля</td><td>м²</td><td>от 50 ₽</td></tr>
-                        <tr><td>6</td><td>Монтаж пароизоляции</td><td>м²</td><td>от 120 ₽</td></tr>
-                        <tr><td>7</td><td>Монтаж теплоизоляции (2 слоя)</td><td>м²</td><td>от 150 ₽</td></tr>
-                        <tr><td>8</td><td>Монтаж ПВХ-мембраны (горизонталь)</td><td>м²</td><td>от 500 ₽</td></tr>
-                        <tr><td>9</td><td>Монтаж примыканий ПВХ к парапетам</td><td>м²</td><td>от 500 ₽</td></tr>
-                        <tr><td>10</td><td>Монтаж парапетных крышек</td><td>м.п.</td><td>от 200 ₽</td></tr>
-                        <tr><td>11</td><td>Монтаж кровельного аэратора</td><td>шт.</td><td>от 1 000 ₽</td></tr>
-                        <tr><td>12</td><td>Монтаж водосточной воронки</td><td>шт.</td><td>от 1 500 ₽</td></tr>
-                        <tr><td>13</td><td>Капитальный ремонт «под ключ»</td><td>м²</td><td>от 1 800 ₽</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <p class="table-note animate-fade-up">В стоимость включена доставка материалов и вывоз строительного мусора. НДС — по запросу (работаем с ИП и ООО).</p>
-            
-            <div class="text-center mt-3 animate-fade-up">
-                <button class="btn btn-primary btn-lg" onclick="document.getElementById('lead-form-2').scrollIntoView({behavior: 'smooth'})">Получить точный расчёт →</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 08. Guarantees -->
-    <section class="section guarantees bg-dark text-white">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Наши гарантии — зафиксированы в договоре</h2>
-            
-            <div class="grid-3 mt-4">
-                <div class="guarantee-card animate-fade-up">
-                    <div class="icon">🛡</div>
-                    <h3>7 лет — гарантия на работы</h3>
-                    <p>Мы устраняем любые дефекты, возникшие по нашей вине, бесплатно в течение 7 лет. Без оговорок и споров.</p>
-                </div>
-                <div class="guarantee-card animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="icon">📋</div>
-                    <h3>Фиксированная цена</h3>
-                    <p>Стоимость прописывается в договоре до начала работ. Мы не поднимаем цену в процессе — даже если обнаружили доп. проблемы.</p>
-                </div>
-                <div class="guarantee-card animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="icon">📄</div>
-                    <h3>Полный пакет документов</h3>
-                    <p>Акты скрытых работ, КС-2 и КС-3 для юрлиц, гарантийный паспорт кровли. Все материалы — с сертификатами соответствия.</p>
-                </div>
-            </div>
-            
-            <div class="guarantee-note animate-fade-up" style="animation-delay: 0.3s;">
-                <p>Срок службы ПВХ-мембраны ведущих производителей (Sika, Bauder, Fatrafol) — <strong>25–50 лет</strong> при правильном монтаже.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 09. Portfolio -->
-    <section class="section portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Наши объекты</h2>
-            <p class="section-desc text-center animate-fade-up">Реальные работы с фотографиями «до и после»</p>
-            
-            <div class="grid-3 portfolio-grid">
-                <!-- Object 1 -->
-                <div class="portfolio-card animate-fade-up">
-                    <div class="portfolio-img-wrapper">
-                        <div class="img-placeholder">
-                            <span>img {600x400}</span>
-                            <div class="before-after-label">До / После</div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Торговый центр</h4>
-                        <ul class="portfolio-meta">
-                            <li><strong>Задача:</strong> Ремонт ПВХ-мембраны после протечки</li>
-                            <li><strong>Площадь:</strong> 540 м²</li>
-                            <li><strong>Срок:</strong> 2 дня</li>
-                            <li><strong>Материал:</strong> ПВХ мембрана 1,2 мм + геотекстиль</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Object 2 -->
-                <div class="portfolio-card animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="portfolio-img-wrapper">
-                        <div class="img-placeholder"><span>img {600x400}</span></div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Коттедж, КП «Рублёво-Успенский»</h4>
-                        <ul class="portfolio-meta">
-                            <li><strong>Задача:</strong> Монтаж плоской кровли «под ключ»</li>
-                            <li><strong>Площадь:</strong> 120 м²</li>
-                            <li><strong>Срок:</strong> 2 дня</li>
-                            <li><strong>Материал:</strong> Пароизоляция + Пеноплэкс + ПВХ</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Object 3 -->
-                <div class="portfolio-card animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="portfolio-img-wrapper">
-                        <div class="img-placeholder"><span>img {600x400}</span></div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>ЖК «Детали», г. Москва</h4>
-                        <ul class="portfolio-meta">
-                            <li><strong>Задача:</strong> Монтаж мембранной кровли 8-й секции</li>
-                            <li><strong>Площадь:</strong> 180 м²</li>
-                            <li><strong>Срок:</strong> 3 дня</li>
-                            <li><strong>Материал:</strong> ПВХ мембрана + щебень + Пеноплэкс</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Object 4 -->
-                <div class="portfolio-card animate-fade-up">
-                    <div class="portfolio-img-wrapper">
-                        <div class="img-placeholder"><span>img {600x400}</span></div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Склад, Подмосковье</h4>
-                        <ul class="portfolio-meta">
-                            <li><strong>Задача:</strong> Капитальный ремонт (замена битума на ПВХ)</li>
-                            <li><strong>Площадь:</strong> 1 200 м²</li>
-                            <li><strong>Срок:</strong> 5 дней</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Object 5 -->
-                <div class="portfolio-card animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="portfolio-img-wrapper">
-                        <div class="img-placeholder"><span>img {600x400}</span></div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Производственное здание</h4>
-                        <ul class="portfolio-meta">
-                            <li><strong>Задача:</strong> Локальный ремонт — устранение 3 зон протечек</li>
-                            <li><strong>Площадь:</strong> 80 м²</li>
-                            <li><strong>Срок:</strong> 1 день</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Object 6 -->
-                <div class="portfolio-card animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="portfolio-img-wrapper">
-                        <div class="img-placeholder"><span>img {600x400}</span></div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h4>Гараж, г. Красногорск</h4>
-                        <ul class="portfolio-meta">
-                            <li><strong>Задача:</strong> Замена рубероида на ПВХ-мембрану</li>
-                            <li><strong>Площадь:</strong> 95 м²</li>
-                            <li><strong>Срок:</strong> 1 день</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <button class="btn btn-outline">Смотреть все объекты →</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. Secondary Lead Form -->
-    <section class="section form-section" id="lead-form-2">
-        <div class="container form-section-container animate-fade-up">
-            <div class="form-section-info">
-                <h2>Получите бесплатный расчёт и выезд специалиста</h2>
-                <p>Оставьте заявку — специалист перезвонит за 15 минут, согласует время выезда и сделает смету бесплатно.</p>
-                <ul class="form-benefits">
-                    <li>✅ Выезд и замер — бесплатно</li>
-                    <li>✅ Смета — в течение 24 часов</li>
-                    <li>✅ Работаем без выходных, 8:00–22:00</li>
-                </ul>
-            </div>
-            <div class="form-section-box">
-                <form class="lead-form shadow-lg">
-                    <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="" disabled selected>Тип объекта</option>
-                            <option value="house">Жилой дом / Коттедж</option>
-                            <option value="flat">Многоквартирный дом</option>
-                            <option value="mall">Торговый центр</option>
-                            <option value="warehouse">Склад / Производство</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Опишите задачу (необязательно)" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
-                    <p class="privacy-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 11. Testimonials -->
-    <section class="section reviews bg-light" id="reviews">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Что говорят наши клиенты</h2>
-            
-            <div class="reviews-slider animate-fade-up">
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h4>Сергей Михайлович, Одинцово</h4>
-                    <p class="review-meta">Объект: коттедж 150 м², монтаж ПВХ</p>
-                    <p>«Выезд был на следующий день после звонка. Специалист чётко объяснил, что нужно сделать и почему. Работы выполнили за 2 дня, уложились точно в смету. Кровля уже пережила осень и зиму — ни единой протечки. Оформили гарантийный паспорт, всё по-взрослому.»</p>
-                </div>
-                
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h4>Ирина Станиславовна, Москва</h4>
-                    <p class="review-meta">Объект: торговый центр, ремонт 540 м²</p>
-                    <p>«Обратились после того, как предыдущий подрядчик сделал "ремонт", который через месяц снова потёк. Эти ребята сначала нашли реальные причины — 3 проблемных зоны. Ремонт сделали за 2 дня, не останавливая работу центра. Уже год — всё сухо.»</p>
-                </div>
-                
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h4>ООО "Логистик-Про", г. Мытищи</h4>
-                    <p class="review-meta">Объект: склад 1 200 м², капитальный ремонт</p>
-                    <p>«Нам нужны были закрывающие документы для бухгалтерии — всё предоставили: договор, КС-2, КС-3, акты скрытых работ, сертификаты. Работали быстро, без нареканий. Уже второй сезон — без проблем.»</p>
-                </div>
-                
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <h4>Андрей Викторович, г. Химки</h4>
-                    <p class="review-meta">Объект: гараж, замена рубероида на ПВХ</p>
-                    <p>«Старый рубероид протекал каждую весну. Предложили ПВХ-мембрану — дороже, но объяснили, что на 30+ лет. Сделали всё за день. Цена соответствовала смете, ничего лишнего не навязывали.»</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 12. FAQ -->
-    <section class="section faq" id="faq">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Часто задаваемые вопросы</h2>
-            
-            <div class="faq-container animate-fade-up">
-                <!-- Using <details> with name attribute for exclusive accordion behavior -->
-                <details class="faq-item" name="faq">
-                    <summary class="faq-question">Можно ли отремонтировать старую мембрану без полной замены?</summary>
-                    <div class="faq-answer">
-                        <p>Да, если повреждения занимают менее 20–30% площади. В этом случае выполняется точечный ремонт: очистка, обезжиривание и сварка заплатки из идентичного материала. Если мембрана сильно состарилась или повреждений много — рекомендуем полную замену: это дешевле, чем бесконечные «заплатки».</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item" name="faq">
-                    <summary class="faq-question">Сколько стоит ремонт ПВХ-мембраны за м² в Москве?</summary>
-                    <div class="faq-answer">
-                        <p>Локальный ремонт — от 150 до 500 руб./м², в зависимости от вида повреждений. Капитальный ремонт (полная замена кровельного пирога) — от 1 800 руб./м². Точная цена определяется после бесплатного осмотра. Смета фиксируется в договоре — изменений в процессе нет.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item" name="faq">
-                    <summary class="faq-question">Как долго прослужит новая ПВХ-кровля?</summary>
-                    <div class="faq-answer">
-                        <p>ПВХ-мембрана ведущих производителей (Sika, Bauder, Fatrafol) при правильном монтаже служит 25–50 лет. Наша гарантия на работы — 7 лет. После этого рекомендуем профилактический осмотр раз в 5 лет.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item" name="faq">
-                    <summary class="faq-question">Работаете ли вы в выходные и праздники?</summary>
-                    <div class="faq-answer">
-                        <p>Да. Мы работаем ежедневно, с 8:00 до 22:00. Аварийный выезд организуем в кратчайшие сроки — в большинстве случаев в день обращения.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item" name="faq">
-                    <summary class="faq-question">Можно ли положить ПВХ-мембрану поверх старого битумного покрытия?</summary>
-                    <div class="faq-answer">
-                        <p>ТПО-мембрану — можно прямо поверх битума. ПВХ-мембрану — только через разделительный слой геотекстиля, так как эти материалы несовместимы напрямую. Это позволяет избежать дорогостоящего демонтажа.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item" name="faq">
-                    <summary class="faq-question">Вы работаете с юридическими лицами и управляющими компаниями?</summary>
-                    <div class="faq-answer">
-                        <p>Да. Заключаем договоры подряда с ИП, ООО, ТСЖ, УК, государственными учреждениями. Предоставляем полный пакет документов: договор, КС-2, КС-3, акты скрытых работ, гарантийный паспорт, сертификаты на материалы.</p>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- 13. Coverage -->
-    <section class="section coverage bg-light" id="contacts">
-        <div class="container">
-            <h2 class="section-title text-center animate-fade-up">Работаем в Москве и Московской области</h2>
-            <p class="section-desc text-center animate-fade-up">Выезд в любую точку МО. Дополнительная плата за выезд зависит от удалённости объекта — уточняйте у менеджера.</p>
-            
-            <div class="coverage-grid animate-fade-up">
-                <div class="coverage-col">
-                    <h4>Москва и ближнее МО:</h4>
-                    <p>Москва · Балашиха · Зеленоград · Химки · Мытищи · Красногорск · Люберцы · Королёв · Одинцово · Подольск · Домодедово</p>
-                </div>
-                <div class="coverage-col">
-                    <h4>МО на удалении до 80 км:</h4>
-                    <p>Раменское · Электросталь · Коломна · Серпухов · Клин · Солнечногорск · Дмитров · Ногинск · Щёлково · Лобня · Пушкино · Реутов · Долгопрудный</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 14. Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <div class="logo logo-footer">
-                    <span class="logo-icon">🏗</span>
-                    <div class="logo-text">
-                        <strong>КРОВЛЯ ПРОФ</strong>
-                    </div>
-                </div>
-                <p>Профессиональный монтаж и ремонт плоской кровли из ПВХ-мембраны в Москве и МО с 2012 года.</p>
-            </div>
-            
-            <div class="footer-contacts">
-                <p><a href="tel:+79015760750" class="phone-link">+7 (901) 576-07-50</a></p>
-                <p><a href="mailto:info@roofprof.ru">info@roofprof.ru</a></p>
-                <p>Ежедневно, 8:00–22:00</p>
-                <p>г. Москва, Дмитровское ш. 157</p>
-            </div>
-            
-            <div class="footer-nav">
-                <a href="#services">Услуги</a>
-                <a href="#prices">Цены</a>
-                <a href="#portfolio">Портфолио</a>
-                <a href="#reviews">Отзывы</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contacts">Контакты</a>
-            </div>
-        </div>
-        
-        <div class="container footer-bottom">
-            <p>© 2025 КРОВЛЯ ПРОФ. Все права защищены.</p>
-            <a href="#">Политика конфиденциальности</a>
-        </div>
-    </footer>
-
-    <!-- Cookie Banner -->
-    <div class="cookie-banner js-cookie-banner" hidden>
-        <div class="cookie-content">
-            <p>Мы используем файлы cookie для аналитики и персонализации в соответствии с требованиями 152-ФЗ. Нажимая «Принять», вы даете согласие на обработку данных согласно <a href="#">Политике конфиденциальности</a>.</p>
-            <div class="cookie-buttons">
-                <button class="btn btn-outline js-cookie-decline">Отклонить</button>
-                <button class="btn btn-primary js-cookie-accept">Принять</button>
-            </div>
-        </div>
+      </div>
     </div>
+    <nav class="header-nav" id="main-nav">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#" class="logo" id="site-logo">
+            <div class="logo-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="9" fill="url(#logoGrad)"/>
+                <!-- Flat roof house -->
+                <!-- Roof slab (flat, wide) -->
+                <rect x="6" y="13" width="28" height="4" rx="1" fill="white"/>
+                <!-- Left chimney-like parapet -->
+                <rect x="6" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+                <!-- Right parapet -->
+                <rect x="30" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+                <!-- House body -->
+                <rect x="8" y="17" width="24" height="12" rx="1" fill="white" opacity="0.9"/>
+                <!-- Door -->
+                <rect x="17" y="22" width="6" height="7" rx="1" fill="url(#logoGrad)"/>
+                <!-- Window left -->
+                <rect x="10" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad)" opacity="0.7"/>
+                <!-- Window right -->
+                <rect x="25" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad)" opacity="0.7"/>
+                <defs>
+                  <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                    <stop offset="0%" stop-color="#f97316"/>
+                    <stop offset="100%" stop-color="#c2410c"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Krovlya-K</span>
+              <span class="logo-sub">плоские кровли</span>
+            </div>
+          </a>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#services" class="nav-link">Услуги</a></li>
+            <li><a href="#about" class="nav-link">О компании</a></li>
+            <li><a href="#process" class="nav-link">Как работаем</a></li>
+            <li><a href="#portfolio" class="nav-link">Портфолио</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#contacts" class="nav-link">Контакты</a></li>
+          </ul>
+          <a href="#callback" class="btn-nav" id="nav-cta">Бесплатный расчёт</a>
+          <button class="burger" id="burger-btn" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <script src="js/script.js"></script>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Монтаж плоской кровли" class="hero-img" loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge animate-in" style="--delay: 0s">
+          <span class="badge-dot"></span>
+          Официальный партнёр ТехноНиколь
+        </div>
+        <h1 class="hero-title animate-in" style="--delay: 0.15s">
+          Монтаж и ремонт<br>
+          <span class="gradient-text">плоских кровель</span><br>
+          под ключ
+        </h1>
+        <p class="hero-desc animate-in" style="--delay: 0.3s">
+          Выполняем работы в Москве и Московской области. Гарантия до 10 лет. Фиксированная цена без скрытых доплат. Частные дома, террасы, коммерческие объекты.
+        </p>
+        <div class="hero-actions animate-in" style="--delay: 0.45s">
+          <a href="#callback" class="btn-primary" id="hero-cta">Получить расчёт бесплатно</a>
+          <a href="#portfolio" class="btn-ghost" id="hero-portfolio">Смотреть работы</a>
+        </div>
+        <div class="hero-stats animate-in" style="--delay: 0.6s">
+          <div class="hero-stat">
+            <span class="stat-num" data-count="450">0</span><span>+</span>
+            <span class="stat-label">объектов сдано</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="hero-stat">
+            <span class="stat-num" data-count="10">0</span><span> лет</span>
+            <span class="stat-label">гарантия</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="hero-stat">
+            <span class="stat-num" data-count="12">0</span><span> лет</span>
+            <span class="stat-label">на рынке</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Листайте</span>
+    </div>
+  </section>
+
+  <!-- USP STRIP -->
+  <section class="usp-strip">
+    <div class="container">
+      <div class="usp-grid">
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <strong>Договор с гарантией</strong>
+            <p>Фиксируем цену и сроки в договоре</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <strong>Срок от 3 дней</strong>
+            <p>Выезд специалиста за 24 часа</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong>Гарантия 10 лет</strong>
+            <p>На материалы и работу</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <strong>Рассрочка 0%</strong>
+            <p>На весь объём работ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Что мы делаем</span>
+        <h2 class="section-title">Наши услуги</h2>
+        <p class="section-desc">Полный спектр работ с плоскими кровлями — от проектирования до гарантийного обслуживания</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" id="service-installation">
+          <div class="service-card-img">
+            <img src="images/hero.png" alt="Монтаж плоской кровли" loading="lazy">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-num">01</div>
+            <h3 class="service-title">Монтаж плоской кровли</h3>
+            <p class="service-desc">Устройство кровельного пирога под ключ: пароизоляция, теплоизоляция, гидроизоляция. Любая площадь и сложность.</p>
+            <ul class="service-features">
+              <li>Неэксплуатируемая кровля</li>
+              <li>Эксплуатируемая терраса</li>
+              <li>Инверсионная кровля</li>
+              <li>Зелёная кровля</li>
+            </ul>
+            <div class="service-price">от <strong>1 200 ₽/м²</strong></div>
+            <a href="#callback" class="service-link">Получить расчёт →</a>
+          </div>
+        </div>
+        <div class="service-card" id="service-repair">
+          <div class="service-card-img">
+            <img src="images/repair.png" alt="Ремонт плоской кровли" loading="lazy">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-num">02</div>
+            <h3 class="service-title">Ремонт кровли</h3>
+            <p class="service-desc">Диагностика протечек, локальный и капитальный ремонт. Быстро выезжаем и устраняем проблему в день обращения.</p>
+            <ul class="service-features">
+              <li>Ремонт протечек</li>
+              <li>Замена кровельного покрытия</li>
+              <li>Ремонт примыканий</li>
+              <li>Капитальный ремонт</li>
+            </ul>
+            <div class="service-price">от <strong>800 ₽/м²</strong></div>
+            <a href="#callback" class="service-link">Получить расчёт →</a>
+          </div>
+        </div>
+        <div class="service-card" id="service-terrace">
+          <div class="service-card-img">
+            <img src="images/terrace.png" alt="Эксплуатируемая кровля-терраса" loading="lazy">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-num">03</div>
+            <h3 class="service-title">Кровля-терраса</h3>
+            <p class="service-desc">Создаём полноценные жилые пространства на крыше. Надёжная гидроизоляция + финишное покрытие под ключ.</p>
+            <ul class="service-features">
+              <li>Террасная доска</li>
+              <li>Тротуарная плитка</li>
+              <li>Газон и озеленение</li>
+              <li>Освещение</li>
+            </ul>
+            <div class="service-price">от <strong>2 500 ₽/м²</strong></div>
+            <a href="#callback" class="service-link">Получить расчёт →</a>
+          </div>
+        </div>
+        <div class="service-card" id="service-inspection">
+          <div class="service-card-img">
+            <img src="images/team.png" alt="Диагностика кровли" loading="lazy">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-num">04</div>
+            <h3 class="service-title">Диагностика и обслуживание</h3>
+            <p class="service-desc">Профессиональный осмотр кровли с отчётом, тепловизионная диагностика, сезонное обслуживание и чистка водостоков.</p>
+            <ul class="service-features">
+              <li>Тепловизионная съёмка</li>
+              <li>Письменный отчёт</li>
+              <li>Очистка водостоков</li>
+              <li>Гарантийный контроль</li>
+            </ul>
+            <div class="service-price">от <strong>5 000 ₽</strong></div>
+            <a href="#callback" class="service-link">Записаться →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-img-main">
+            <img src="images/house.png" alt="Современный дом с плоской кровлей" loading="lazy">
+          </div>
+          <div class="about-img-secondary">
+            <img src="images/repair.png" alt="Кровельные работы" loading="lazy">
+          </div>
+          <div class="about-award">
+            <div class="award-icon">🏆</div>
+            <div>
+              <strong>ТОП-10</strong>
+              <span>кровельных компаний Москвы 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">О компании</span>
+          <h2 class="section-title">КровляПро — надёжность, проверенная годами</h2>
+          <p class="about-text">
+            С 2012 года мы специализируемся исключительно на плоских кровлях. За это время выполнили более 450 объектов в Москве и Московской области — от небольших частных домов до крупных коммерческих комплексов.
+          </p>
+          <p class="about-text">
+            Являемся официальным авторизованным партнёром компании «ТехноНиколь» — ведущего производителя кровельных материалов в России. Это позволяет нам получать материалы по лучшим ценам и предоставлять расширенную гарантию.
+          </p>
+          <div class="about-facts">
+            <div class="fact">
+              <span class="fact-num">450+</span>
+              <span class="fact-label">Завершённых объектов</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">12</span>
+              <span class="fact-label">Лет на рынке</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">98%</span>
+              <span class="fact-label">Довольных клиентов</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">10</span>
+              <span class="fact-label">Лет гарантии</span>
+            </div>
+          </div>
+          <div class="about-certs">
+            <div class="cert-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Лицензированная компания
+            </div>
+            <div class="cert-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Партнёр ТехноНиколь
+            </div>
+            <div class="cert-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              Лауреат премии 2024
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us section">
+    <div class="why-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Наши преимущества</span>
+        <h2 class="section-title">Почему выбирают нас</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" id="why-guarantee">
+          <div class="why-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Гарантия до 10 лет</h3>
+          <p>Закрепляем гарантийные обязательства в договоре. Ни копейки доплат — всё включено в цену.</p>
+        </div>
+        <div class="why-card" id="why-materials">
+          <div class="why-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <h3>Сертифицированные материалы</h3>
+          <p>Работаем только с продукцией ТехноНиколь, Icopal и других ведущих производителей с сертификатами соответствия.</p>
+        </div>
+        <div class="why-card" id="why-price">
+          <div class="why-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Фиксированная цена</h3>
+          <p>Цена в договоре не меняется. Никаких «вдруг выяснилось» и дополнительных счетов в процессе работы.</p>
+        </div>
+        <div class="why-card" id="why-speed">
+          <div class="why-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Чёткие сроки</h3>
+          <p>Соблюдаем сроки или платим штраф. Типичный объект 100–300 м² выполняем за 3–7 рабочих дней.</p>
+        </div>
+        <div class="why-card" id="why-team">
+          <div class="why-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Опытная команда</h3>
+          <p>Собственные бригады с опытом от 5 лет. Никаких субподрядчиков — работаем сами и отвечаем за качество.</p>
+        </div>
+        <div class="why-card" id="why-clean">
+          <div class="why-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </div>
+          <h3>Уборка после работ</h3>
+          <p>Полностью убираем строительный мусор после завершения. Сдаём объект в чистоте и порядке.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Как мы работаем</span>
+        <h2 class="section-title">5 шагов к надёжной кровле</h2>
+        <p class="section-desc">Прозрачный процесс от первого звонка до подписания акта о приёмке</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step" id="step-1">
+          <div class="step-indicator">
+            <div class="step-num">01</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h3>Заявка и замер</h3>
+            <p>Оставляете заявку или звоните. В течение 24 часов выезжаем на бесплатный замер и осмотр объекта.</p>
+            <div class="step-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              24 часа
+            </div>
+          </div>
+        </div>
+        <div class="process-step" id="step-2">
+          <div class="step-indicator">
+            <div class="step-num">02</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h3>Коммерческое предложение</h3>
+            <p>Составляем детальную смету с перечнем материалов и работ. Фиксируем цену — без скрытых доплат.</p>
+            <div class="step-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              1–2 дня
+            </div>
+          </div>
+        </div>
+        <div class="process-step" id="step-3">
+          <div class="step-indicator">
+            <div class="step-num">03</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h3>Подписание договора</h3>
+            <p>Заключаем договор с чёткими сроками, гарантийными обязательствами и фиксированной ценой.</p>
+            <div class="step-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              1 день
+            </div>
+          </div>
+        </div>
+        <div class="process-step" id="step-4">
+          <div class="step-indicator">
+            <div class="step-num">04</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h3>Выполнение работ</h3>
+            <p>Наша бригада выполняет кровельные работы строго по технологии. Фотоотчёт на каждом этапе.</p>
+            <div class="step-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              3–14 дней
+            </div>
+          </div>
+        </div>
+        <div class="process-step" id="step-5">
+          <div class="step-indicator">
+            <div class="step-num">05</div>
+            <div class="step-line last"></div>
+          </div>
+          <div class="step-content">
+            <h3>Сдача и гарантия</h3>
+            <p>Подписываем акт приёмки, выдаём гарантийный талон. Регулярные проверки в течение гарантийного периода.</p>
+            <div class="step-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Гарантия 10 лет
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Наши работы</span>
+        <h2 class="section-title">Портфолио проектов</h2>
+        <p class="section-desc">Реализованные объекты в Москве и Подмосковье</p>
+      </div>
+      <div class="portfolio-filters">
+        <button class="pf-btn active" data-filter="all" id="filter-all">Все проекты</button>
+        <button class="pf-btn" data-filter="install" id="filter-install">Монтаж</button>
+        <button class="pf-btn" data-filter="repair" id="filter-repair">Ремонт</button>
+        <button class="pf-btn" data-filter="terrace" id="filter-terrace">Террасы</button>
+      </div>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <div class="portfolio-item" data-category="install">
+          <img src="images/hero.png" alt="Монтаж кровли частный дом" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Частный дом, Рублёвка</h4>
+              <p>Монтаж • 280 м² • 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item large" data-category="terrace">
+          <img src="images/terrace.png" alt="Эксплуатируемая кровля-терраса" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Эксплуатируемая терраса, Москва</h4>
+              <p>Терраса • 180 м² • 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="repair">
+          <img src="images/repair.png" alt="Ремонт кровли" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Капремонт, Одинцово</h4>
+              <p>Ремонт • 450 м² • 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="install">
+          <img src="images/house.png" alt="Современный дом с плоской кровлей" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Современный коттедж, Новая Москва</h4>
+              <p>Монтаж • 320 м² • 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item large" data-category="install">
+          <img src="images/team.png" alt="Коммерческий объект" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Производственный комплекс, Химки</h4>
+              <p>Монтаж • 2800 м² • 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="terrace">
+          <img src="images/terrace.png" alt="Зелёная кровля" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Зелёная кровля, Митино</h4>
+              <p>Терраса + озеленение • 240 м² • 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR CTA -->
+  <section class="calc-cta" id="callback">
+    <div class="calc-cta-bg">
+      <img src="images/house.png" alt="" loading="lazy">
+      <div class="calc-cta-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="calc-cta-inner">
+        <div class="calc-cta-content">
+          <h2>Рассчитайте стоимость<br>вашей кровли бесплатно</h2>
+          <p>Заполните форму и наш специалист свяжется с вами в течение 30 минут, чтобы обсудить детали проекта и рассчитать точную стоимость работ.</p>
+          <div class="calc-cta-guarantees">
+            <div class="cta-guarantee">✓ Выезд на замер бесплатно</div>
+            <div class="cta-guarantee">✓ Смета за 1 день</div>
+            <div class="cta-guarantee">✓ Без скрытых расходов</div>
+          </div>
+        </div>
+        <div class="calc-form-wrap">
+          <form class="calc-form" id="contact-form" novalidate>
+            <h3>Получить расчёт</h3>
+            <div class="form-group">
+              <label for="form-name">Ваше имя *</label>
+              <input type="text" id="form-name" name="name" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+              <label for="form-phone">Телефон *</label>
+              <input type="tel" id="form-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form-group">
+              <label for="form-area">Площадь кровли (м²)</label>
+              <input type="number" id="form-area" name="area" placeholder="Например: 150">
+            </div>
+            <div class="form-group">
+              <label for="form-type">Тип работ</label>
+              <select id="form-type" name="type">
+                <option value="">Выберите тип работ</option>
+                <option value="install">Монтаж новой кровли</option>
+                <option value="repair">Ремонт кровли</option>
+                <option value="terrace">Кровля-терраса</option>
+                <option value="inspect">Диагностика</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="form-submit">
+              Отправить заявку
+            </button>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+          </form>
+          <div class="form-success" id="form-success" style="display:none;">
+            <div class="success-icon">✓</div>
+            <h3>Заявка отправлена!</h3>
+            <p>Мы перезвоним вам в течение 30 минут</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Отзывы</span>
+        <h2 class="section-title">Что говорят наши клиенты</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">Сергей Михайлович, Одинцово</div>
+          <div class="review-meta">Объект: коттедж 150 м², монтаж ПВХ</div>
+          <p class="review-text">«Выезд был на следующий день после звонка. Специалист чётко объяснил, что нужно сделать и почему. Работы выполнили за 2 дня, уложились точно в смету. Кровля уже пережила осень и зиму — ни единой протечки. Оформили гарантийный паспорт, всё по-взрослому.»</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">Ирина Станиславовна, Москва</div>
+          <div class="review-meta">Объект: торговый центр, ремонт 540 м²</div>
+          <p class="review-text">«Обратились после того, как предыдущий подрядчик сделал "ремонт", который через месяц снова потёк. Эти ребята сначала нашли реальные причины — 3 проблемных зоны. Ремонт сделали за 2 дня, не останавливая работу центра. Уже год — всё сухо.»</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">ООО "Логистик-Про", г. Мытищи</div>
+          <div class="review-meta">Объект: склад 1 200 м², капитальный ремонт</div>
+          <p class="review-text">«Нам нужны были закрывающие документы для бухгалтерии — всё предоставили: договор, КС-2, КС-3, акты скрытых работ, сертификаты. Работали быстро, без нареканий. Уже второй сезон — без проблем.»</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">Андрей Викторович, г. Химки</div>
+          <div class="review-meta">Объект: гараж, замена рубероида на ПВХ</div>
+          <p class="review-text">«Старый рубероид протекал каждую весну. Предложили ПВХ-мембрану — дороже, но объяснили, что на 30+ лет. Сделали всё за день. Цена соответствовала смете, ничего лишнего не навязывали.»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Вопрос — ответ</span>
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+      </div>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false">
+            <span>Сколько стоит монтаж плоской кровли?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Стоимость зависит от типа кровли, площади объекта и выбранных материалов. В среднем монтаж неэксплуатируемой кровли стоит от 1 200 ₽/м², эксплуатируемой — от 2 500 ₽/м². Точную стоимость рассчитаем после выезда на замер — это бесплатно.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false">
+            <span>Можно ли монтировать кровлю зимой?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Да, современные технологии позволяют выполнять кровельные работы при температуре до –20°С. При работе в зимний период мы используем специальное зимнее оборудование и материалы с соответствующими характеристиками. Стоимость зимних работ может быть немного выше из-за дополнительных затрат на прогрев поверхности.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false">
+            <span>Как устроен кровельный пирог плоской кровли?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Стандартный кровельный пирог включает несколько слоёв снизу вверх: пароизоляция (защита от влаги изнутри), теплоизоляция (минеральная вата или PIR-плиты), основание под гидроизоляцию, гидроизоляционный ковёр (1–2 слоя). Для эксплуатируемой кровли добавляются защитные слои и финишное покрытие.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false">
+            <span>Что делать, если появилась протечка в гарантийный период?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Просто позвоните нам по номеру +7 (495) 123-45-67. Наш специалист выедет к вам в течение 24 часов, проведёт диагностику и устранит протечку совершенно бесплатно — это наше гарантийное обязательство по договору.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false">
+            <span>Работаете ли вы за пределами Москвы?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Да, мы работаем по всему Подмосковью — Московская область в радиусе 100 км от МКАД. При объектах свыше 200 м² выезжаем и в более дальние регионы. Стоимость выезда рассчитывается индивидуально.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-6">
+          <button class="faq-question" aria-expanded="false">
+            <span>Как быстро вы можете начать работы?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>После подписания договора и предоплаты мы начинаем работы в согласованный срок — как правило, в течение 3–7 рабочих дней. В срочных случаях (например, при протечке) выезжаем в день обращения.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="contacts section" id="contacts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Контакты</span>
+        <h2 class="section-title">Свяжитесь с нами</h2>
+      </div>
+      <div class="contacts-grid">
+        <div class="contacts-info">
+          <div class="contact-item contact-phone-big" id="contact-phone">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.18"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Телефон</div>
+              <a href="tel:+79015760750" class="contact-value contact-phone-link">+7 901 576-07-50</a>
+              <div class="contact-phone-hint">Нажмите для звонка или скопируйте</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:info@krovlya-k.ru" class="contact-value">info@krovlya-k.ru</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Адрес офиса</div>
+              <div class="contact-value">г. Москва, ул. Дмитровское ш. 157</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Режим работы</div>
+              <div class="contact-value">Пн–Пт: 9:00–19:00<br>Сб: 10:00–16:00</div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://max.ru/c/79015760750" class="social-link" aria-label="Макс" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 5.97 2 10.875c0 2.624 1.298 4.965 3.332 6.554-.183.743-.655 2.502-1.332 3.57 0 0 1.954 0 3.931-1.39a11.19 11.19 0 0 0 4.069.766c5.523 0 10-3.97 10-8.875S17.523 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="ВКонтакте">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.08 13H16.4c-.6 0-.78-.48-1.86-1.56-.92-.9-1.32-.96-1.56-.96-.32 0-.4.08-.4.54v1.44c0 .36-.12.54-1.08.54-1.62 0-3.36-.96-4.62-2.76C5.2 10.32 4.76 8.34 4.76 7.9c0-.24.08-.48.54-.48h1.74c.42 0 .54.18.72.66.84 2.46 2.28 4.62 2.88 4.62.24 0 .3-.12.3-.72V9.66c-.06-1.26-.72-1.38-.72-1.8 0-.24.18-.48.48-.48h2.76c.36 0 .48.18.48.54v3.54c0 .36.18.48.3.48.24 0 .42-.12.84-.54 1.26-1.44 2.16-3.66 2.16-3.66.12-.24.3-.48.72-.48h1.74c.54 0 .66.3.54.6-.24 1.08-2.52 4.32-2.52 4.32-.18.3-.24.42 0 .72.18.24.78.78 1.2 1.26.72.84 1.32 1.56 1.44 2.04.12.48-.12.72-.6.72z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contacts-map" id="map-container">
+          <div class="map-placeholder">
+            <div class="map-bg">
+              <img src="images/hero.png" alt="" loading="lazy" style="object-position: center; filter: grayscale(0.7) opacity(0.4);">
+            </div>
+            <div class="map-pin">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="#f97316" stroke="white" stroke-width="1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="white"/></svg>
+              <div class="map-label">Krovlya-K<br>ул. Дмитровское ш. 157</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect width="40" height="40" rx="9" fill="url(#logoGrad2)"/>
+                <rect x="6" y="13" width="28" height="4" rx="1" fill="white"/>
+                <rect x="6" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+                <rect x="30" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+                <rect x="8" y="17" width="24" height="12" rx="1" fill="white" opacity="0.9"/>
+                <rect x="17" y="22" width="6" height="7" rx="1" fill="url(#logoGrad2)"/>
+                <rect x="10" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad2)" opacity="0.7"/>
+                <rect x="25" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad2)" opacity="0.7"/>
+                <defs>
+                  <linearGradient id="logoGrad2" x1="0" y1="0" x2="40" y2="40">
+                    <stop offset="0%" stop-color="#f97316"/>
+                    <stop offset="100%" stop-color="#c2410c"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Krovlya-K</span>
+              <span class="logo-sub">плоские кровли</span>
+            </div>
+          </a>
+          <p class="footer-tagline">Монтаж и ремонт плоских кровель в Москве и МО с гарантией до 10 лет</p>
+          <div class="footer-partner">Официальный партнёр <strong>ТехноНиколь</strong></div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#services">Монтаж кровли</a></li>
+            <li><a href="#services">Ремонт кровли</a></li>
+            <li><a href="#services">Кровля-терраса</a></li>
+            <li><a href="#services">Диагностика</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#process">Как работаем</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+79015760750">+7 901 576-07-50</a></li>
+            <li><a href="mailto:info@krovlya-k.ru">info@krovlya-k.ru</a></li>
+            <li>г. Москва, ул. Дмитровское ш. 157</li>
+            <li>Пн–Пт: 9:00–19:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Krovlya-K. Все права защищены.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Политика конфиденциальности</a>
+          <a href="offer.html">Договор оферты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floating-cta">
+    <a href="tel:+79015760750" class="float-btn phone-btn" aria-label="Позвонить">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.18"/></svg>
+    </a>
+    <a href="https://max.ru/c/79015760750" class="float-btn max-btn" aria-label="Макс" target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 5.97 2 10.875c0 2.624 1.298 4.965 3.332 6.554-.183.743-.655 2.502-1.332 3.57 0 0 1.954 0 3.931-1.39a11.19 11.19 0 0 0 4.069.766c5.523 0 10-3.97 10-8.875S17.523 2 12 2z"/></svg>
+    </a>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="back-to-top" aria-label="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <!-- MOBILE BOTTOM CALL ACTION BAR -->
+  <div class="mobile-call-bar" id="mobile-call-bar">
+    <a href="tel:+79015760750" class="btn-primary btn-full mobile-call-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.18"/></svg>
+      Позвонить: +7 901 576-07-50
+    </a>
+  </div>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-text">
+      Мы используем файлы cookie для аналитики и персонализации в соответствии с требованиями 152-ФЗ. Нажимая «Принять», вы даете согласие на обработку данных согласно <a href="privacy.html" target="_blank">Политике конфиденциальности</a>.
+    </div>
+    <div class="cookie-btn-wrap">
+      <button class="cookie-btn" id="cookie-accept-btn">Принять</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — Krovlya-K</title>
+  <meta name="description" content="Политика конфиденциальности компании Krovlya-K. Условия обработки персональных данных.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --or-500: #f97316;
+      --or-600: #ea580c;
+      --or-50:  #fff8ed;
+      --or-200: #ffd9a5;
+      --gray-900: #1c1917;
+      --gray-800: #292524;
+      --gray-700: #44403c;
+      --gray-600: #57534e;
+      --gray-500: #78716c;
+      --gray-400: #a8a29e;
+      --gray-200: #e7e5e4;
+      --gray-100: #f5f5f4;
+      --gray-50:  #fafaf9;
+      --white:    #ffffff;
+      --font-main: 'Geologica', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--gray-800); background: var(--white); line-height: 1.7; }
+    a { color: var(--or-600); text-decoration: underline; }
+    a:hover { color: var(--or-500); }
+
+    /* HEADER */
+    .doc-header {
+      background: var(--gray-900);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .doc-header-inner {
+      max-width: 900px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .doc-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: inherit;
+    }
+    .doc-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #f97316, #c2410c);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .doc-logo-icon svg { display: block; }
+    .doc-logo-name {
+      font-family: var(--font-main);
+      font-size: 18px; font-weight: 800;
+      color: var(--white);
+    }
+    .doc-back {
+      font-size: 14px; font-weight: 600;
+      color: var(--gray-400); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s;
+    }
+    .doc-back:hover { color: var(--white); }
+
+    /* HERO */
+    .doc-hero {
+      background: var(--gray-100);
+      border-bottom: 2px solid var(--gray-200);
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .doc-hero-tag {
+      display: inline-block;
+      background: var(--or-50); color: var(--or-600);
+      border: 1px solid var(--or-200);
+      font-family: var(--font-main);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .doc-hero h1 {
+      font-family: var(--font-main);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900; color: var(--gray-900);
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+    .doc-hero-meta {
+      font-size: 14px; color: var(--gray-500);
+    }
+
+    /* CONTENT */
+    .doc-content {
+      max-width: 900px; margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .doc-toc {
+      background: var(--gray-50);
+      border: 1.5px solid var(--gray-200);
+      border-left: 4px solid var(--or-500);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .doc-toc h2 {
+      font-family: var(--font-main);
+      font-size: 14px; font-weight: 700;
+      color: var(--gray-700);
+      letter-spacing: .06em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .doc-toc ol {
+      padding-left: 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .doc-toc a {
+      font-size: 14px; color: var(--or-600);
+      font-weight: 500; text-decoration: none;
+    }
+    .doc-toc a:hover { text-decoration: underline; }
+
+    .doc-section { margin-bottom: 48px; }
+    .doc-section h2 {
+      font-family: var(--font-main);
+      font-size: 20px; font-weight: 800;
+      color: var(--gray-900);
+      border-bottom: 2px solid var(--gray-200);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      scroll-margin-top: 80px;
+    }
+    .doc-section h3 {
+      font-family: var(--font-main);
+      font-size: 16px; font-weight: 700;
+      color: var(--gray-800);
+      margin: 24px 0 10px;
+    }
+    .doc-section p {
+      font-size: 15px; color: var(--gray-700);
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+    .doc-section ul, .doc-section ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .doc-section li {
+      font-size: 15px; color: var(--gray-700);
+      margin-bottom: 8px; line-height: 1.65;
+    }
+    .doc-section ul li::marker { color: var(--or-500); }
+
+    .doc-highlight {
+      background: var(--or-50);
+      border-left: 4px solid var(--or-500);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px; color: var(--gray-700);
+      line-height: 1.65;
+    }
+
+    /* FOOTER */
+    .doc-footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    .doc-footer a { color: var(--or-400); text-decoration: none; }
+    .doc-footer a:hover { color: var(--or-300); }
+
+    @media (max-width: 600px) {
+      .doc-hero { padding: 32px 16px; }
+      .doc-content { padding: 32px 16px 60px; }
+      .doc-toc { padding: 16px 18px; }
+      .doc-section h2 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="doc-header">
+    <div class="doc-header-inner">
+      <a href="index.html" class="doc-logo">
+        <div class="doc-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 40 40" fill="none">
+            <rect x="6" y="13" width="28" height="4" rx="1" fill="white"/>
+            <rect x="6" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+            <rect x="30" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
+            <rect x="8" y="17" width="24" height="12" rx="1" fill="white" opacity="0.9"/>
+            <rect x="17" y="22" width="6" height="7" rx="1" fill="#f97316"/>
+            <rect x="10" y="20" width="5" height="4" rx="0.5" fill="#f97316" opacity="0.7"/>
+            <rect x="25" y="20" width="5" height="4" rx="0.5" fill="#f97316" opacity="0.7"/>
+          </svg>
+        </div>
+        <span class="doc-logo-name">Krovlya-K</span>
+      </a>
+      <a href="index.html" class="doc-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+        На главную
+      </a>
+    </div>
+  </header>
+
+  <div class="doc-hero">
+    <div class="doc-hero-tag">Юридический документ</div>
+    <h1>Политика конфиденциальности</h1>
+    <p class="doc-hero-meta">Версия 1.0 &nbsp;·&nbsp; Дата публикации: 01 января 2025 г.</p>
+  </div>
+
+  <div class="doc-content">
+
+    <div class="doc-toc">
+      <h2>Содержание</h2>
+      <ol>
+        <li><a href="#s1">Общие положения</a></li>
+        <li><a href="#s2">Оператор персональных данных</a></li>
+        <li><a href="#s3">Какие данные мы собираем</a></li>
+        <li><a href="#s4">Цели обработки данных</a></li>
+        <li><a href="#s5">Правовые основания</a></li>
+        <li><a href="#s6">Передача данных третьим лицам</a></li>
+        <li><a href="#s7">Защита данных</a></li>
+        <li><a href="#s8">Сроки хранения</a></li>
+        <li><a href="#s9">Права субъектов данных</a></li>
+        <li><a href="#s10">Cookies и аналитика</a></li>
+        <li><a href="#s11">Контактная информация</a></li>
+      </ol>
+    </div>
+
+    <div class="doc-section" id="s1">
+      <h2>1. Общие положения</h2>
+      <p>Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты персональных данных пользователей сайта <strong>krovlya-k.ru</strong> (далее — «Сайт»), предоставляемых при использовании сервисов Сайта.</p>
+      <p>Политика разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», а также иными применимыми нормативными правовыми актами Российской Федерации в области защиты персональных данных.</p>
+      <div class="doc-highlight">
+        Используя Сайт или отправляя любую форму обратной связи, вы подтверждаете своё согласие с условиями настоящей Политики. Если вы не согласны с Политикой, пожалуйста, прекратите использование Сайта.
+      </div>
+      <p>Оператор вправе вносить изменения в Политику без специального уведомления. Актуальная версия Политики всегда доступна на данной странице. Дата изменений указывается в заголовке документа.</p>
+    </div>
+
+    <div class="doc-section" id="s2">
+      <h2>2. Оператор персональных данных</h2>
+      <p>Оператором персональных данных является:</p>
+      <ul>
+        <li><strong>Наименование:</strong> ООО «Кровля-К»</li>
+        <li><strong>Адрес:</strong> г. Москва, ул. Дмитровское ш., д. 157</li>
+        <li><strong>Телефон:</strong> <a href="tel:+79015760750">+7 901 576-07-50</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@krovlya-k.ru">info@krovlya-k.ru</a></li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s3">
+      <h2>3. Какие данные мы собираем</h2>
+      <p>Мы обрабатываем следующие категории персональных данных:</p>
+      <h3>3.1. Данные, предоставляемые вами добровольно</h3>
+      <ul>
+        <li>Имя и фамилия</li>
+        <li>Номер телефона</li>
+        <li>Адрес электронной почты</li>
+        <li>Адрес объекта (для расчёта стоимости работ)</li>
+        <li>Площадь кровли и иные параметры, указанные в форме расчёта</li>
+        <li>Сообщения, переданные через форму обратной связи</li>
+      </ul>
+      <h3>3.2. Данные, собираемые автоматически</h3>
+      <ul>
+        <li>IP-адрес устройства</li>
+        <li>Тип браузера и операционная система</li>
+        <li>Дата и время посещения</li>
+        <li>Просмотренные страницы и разделы</li>
+        <li>Источник перехода (реферер)</li>
+        <li>Файлы cookies (подробнее — в разделе 10)</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s4">
+      <h2>4. Цели обработки данных</h2>
+      <p>Ваши персональные данные обрабатываются в следующих целях:</p>
+      <ul>
+        <li>Обработка заявок и предоставление коммерческих предложений</li>
+        <li>Консультирование по вопросам монтажа и ремонта кровли</li>
+        <li>Составление сметы и расчёт стоимости работ</li>
+        <li>Заключение и исполнение договоров на выполнение работ</li>
+        <li>Осуществление гарантийного обслуживания</li>
+        <li>Направление информационных и рекламных сообщений (при наличии согласия)</li>
+        <li>Улучшение качества сервиса и работы Сайта</li>
+        <li>Исполнение требований законодательства Российской Федерации</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s5">
+      <h2>5. Правовые основания обработки</h2>
+      <p>Обработка персональных данных осуществляется на следующих правовых основаниях:</p>
+      <ul>
+        <li>Согласие субъекта персональных данных (ст. 9 Федерального закона № 152-ФЗ)</li>
+        <li>Исполнение договора, стороной которого является субъект персональных данных (п. 5 ч. 1 ст. 6 Федерального закона № 152-ФЗ)</li>
+        <li>Осуществление прав и законных интересов оператора (п. 7 ч. 1 ст. 6 Федерального закона № 152-ФЗ)</li>
+        <li>Исполнение обязанностей, предусмотренных законодательством (п. 2 ч. 1 ст. 6 Федерального закона № 152-ФЗ)</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s6">
+      <h2>6. Передача данных третьим лицам</h2>
+      <p>Мы не продаём и не передаём ваши персональные данные третьим лицам без вашего согласия, за исключением случаев, предусмотренных законодательством.</p>
+      <p>Данные могут быть переданы следующим категориям получателей:</p>
+      <ul>
+        <li><strong>Подрядчики и исполнители</strong> — в объёме, необходимом для выполнения заказанных вами работ, при условии соблюдения ими конфиденциальности</li>
+        <li><strong>Государственные органы</strong> — в случаях, предусмотренных законодательством РФ (по официальным запросам)</li>
+        <li><strong>Сервисы аналитики</strong> — Яндекс.Метрика, Google Analytics в обезличенном виде</li>
+        <li><strong>CRM-системы</strong> — для учёта заявок и клиентов, связанные с нашей компанией</li>
+      </ul>
+      <div class="doc-highlight">
+        Все контрагенты, получающие доступ к персональным данным, принимают на себя обязательства по обеспечению их конфиденциальности и безопасности.
+      </div>
+    </div>
+
+    <div class="doc-section" id="s7">
+      <h2>7. Защита персональных данных</h2>
+      <p>Мы принимаем необходимые организационные и технические меры для защиты ваших персональных данных от неправомерного доступа, изменения, раскрытия или уничтожения:</p>
+      <ul>
+        <li>Передача данных осуществляется по защищённому протоколу HTTPS</li>
+        <li>Доступ к базам данных ограничен и регулярно проверяется</li>
+        <li>Сотрудники, работающие с персональными данными, подписывают соглашение о конфиденциальности</li>
+        <li>Проводится регулярный аудит информационной безопасности</li>
+        <li>Хранение данных осуществляется на серверах с ограниченным физическим доступом</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s8">
+      <h2>8. Сроки хранения данных</h2>
+      <p>Персональные данные хранятся в течение срока, необходимого для достижения целей их обработки:</p>
+      <ul>
+        <li>Данные из форм обратной связи — 3 года с момента получения</li>
+        <li>Данные по заключённым договорам — 5 лет с момента исполнения обязательств</li>
+        <li>Данные о гарантийных случаях — в течение гарантийного срока + 1 год</li>
+        <li>Данные для маркетинговых рассылок — до момента отзыва согласия</li>
+        <li>Обезличенные аналитические данные — без ограничений</li>
+      </ul>
+      <p>По истечении указанных сроков данные уничтожаются или обезличиваются в порядке, установленном внутренними регламентами компании.</p>
+    </div>
+
+    <div class="doc-section" id="s9">
+      <h2>9. Права субъектов персональных данных</h2>
+      <p>В соответствии с Федеральным законом № 152-ФЗ вы вправе:</p>
+      <ul>
+        <li>Получить подтверждение факта обработки ваших персональных данных и ознакомиться с ними</li>
+        <li>Требовать уточнения, блокирования или уничтожения персональных данных, если они являются неполными, устаревшими, неточными или обрабатываются незаконно</li>
+        <li>Отозвать согласие на обработку персональных данных</li>
+        <li>Обжаловать действия или бездействие оператора в Роскомнадзор или в судебном порядке</li>
+        <li>Получить информацию о третьих лицах, которым были переданы ваши данные</li>
+      </ul>
+      <p>Для реализации своих прав обратитесь к нам по адресу: <a href="mailto:info@krovlya-k.ru">info@krovlya-k.ru</a> или по телефону <a href="tel:+79015760750">+7 901 576-07-50</a>. Запрос рассматривается в течение 30 дней.</p>
+    </div>
+
+    <div class="doc-section" id="s10">
+      <h2>10. Cookies и аналитика</h2>
+      <p>Наш Сайт использует файлы cookies — небольшие текстовые файлы, сохраняемые на вашем устройстве при посещении Сайта.</p>
+      <h3>Типы используемых cookies</h3>
+      <ul>
+        <li><strong>Технические cookies</strong> — необходимы для корректной работы Сайта, не могут быть отключены</li>
+        <li><strong>Аналитические cookies</strong> — позволяют анализировать поведение пользователей (Яндекс.Метрика, Google Analytics)</li>
+        <li><strong>Маркетинговые cookies</strong> — используются для показа персонализированной рекламы</li>
+      </ul>
+      <p>Вы можете управлять настройками cookies через параметры вашего браузера. Отключение cookies может повлиять на функциональность Сайта.</p>
+      <p>Аналитические данные собираются в обезличенном виде и используются исключительно для улучшения качества наших услуг и работы Сайта.</p>
+    </div>
+
+    <div class="doc-section" id="s11">
+      <h2>11. Контактная информация</h2>
+      <p>По всем вопросам, связанным с обработкой персональных данных, обращайтесь:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:info@krovlya-k.ru">info@krovlya-k.ru</a></li>
+        <li><strong>Телефон:</strong> <a href="tel:+79015760750">+7 901 576-07-50</a></li>
+        <li><strong>Адрес:</strong> г. Москва, ул. Дмитровское ш., д. 157</li>
+        <li><strong>Режим работы:</strong> Пн–Пт: 9:00–19:00, Сб: 10:00–16:00</li>
+      </ul>
+      <p>Также вы можете направить жалобу в Федеральную службу по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор): <a href="https://rkn.gov.ru" target="_blank" rel="noopener">rkn.gov.ru</a></p>
+    </div>
+
+  </div>
+
+  <footer class="doc-footer">
+    <p>© 2025 Krovlya-K &nbsp;·&nbsp; <a href="index.html">Главная</a> &nbsp;·&nbsp; <a href="offer.html">Договор оферты</a></p>
+  </footer>
+
+</body>
+</html>
