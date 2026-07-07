@@ -161,10 +161,11 @@ input, select, textarea { font: inherit; }
   inset: 0;
   background: linear-gradient(135deg, var(--or-600), var(--or-700));
   opacity: 0;
+  z-index: 1;
   transition: opacity var(--transition);
 }
 .btn-primary:hover::before { opacity: 1; }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(234,88,12,.4); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(234,88,12,.45); }
 .btn-primary:active { transform: translateY(0); }
 
 .btn-ghost {
@@ -205,6 +206,64 @@ input, select, textarea { font: inherit; }
   background: var(--or-600);
   transform: translateY(-1px);
   box-shadow: var(--shadow-or);
+}
+
+.btn-mobile-phone {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1.5px solid rgba(249, 115, 22, 0.25);
+  color: var(--or-600);
+  border-radius: var(--radius-md);
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all var(--transition);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.08);
+}
+.btn-mobile-phone:hover {
+  background: rgba(249, 115, 22, 0.15);
+  border-color: var(--or-500);
+  color: var(--or-700);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.15);
+}
+
+/* Glass shine animation & z-indexing for span protection */
+.btn-primary, .btn-ghost, .btn-nav, .btn-mobile-phone {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary span, .btn-ghost span, .btn-nav span, .btn-mobile-phone span,
+.btn-primary svg, .btn-ghost svg, .btn-nav svg, .btn-mobile-phone svg {
+  position: relative;
+  z-index: 3;
+}
+.btn-primary::after, .btn-ghost::after, .btn-nav::after, .btn-mobile-phone::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: none;
+  z-index: 2;
+  pointer-events: none;
+}
+.btn-primary:hover::after, .btn-ghost:hover::after, .btn-nav:hover::after, .btn-mobile-phone:hover::after {
+  left: 180%;
+  transition: left 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .btn-full { width: 100%; justify-content: center; }
@@ -511,9 +570,11 @@ input, select, textarea { font: inherit; }
 .service-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
-  border: 1.5px solid var(--gray-200);
+  border: 1.5px solid rgba(231, 229, 228, 0.6);
   transition: all var(--transition);
   display: flex; flex-direction: column;
 }
@@ -632,6 +693,8 @@ input, select, textarea { font: inherit; }
   background: rgba(255,255,255,.04);
   border: 1.5px solid rgba(255,255,255,.08);
   border-radius: var(--radius-lg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: all var(--transition);
 }
 .why-card:hover { background: rgba(255,255,255,.07); border-color: rgba(249,115,22,.3); transform: translateY(-4px); }
@@ -790,8 +853,10 @@ input, select, textarea { font: inherit; }
 .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
 .review-card {
-  background: var(--white);
-  border: 1.5px solid var(--gray-200);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(231, 229, 228, 0.6);
   border-radius: var(--radius-lg);
   padding: 32px;
   transition: all var(--transition);
@@ -874,13 +939,15 @@ input, select, textarea { font: inherit; }
 .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
 
 .faq-item {
-  background: var(--gray-50);
+  background: rgba(245, 245, 244, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1.5px solid var(--gray-200);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: border-color var(--transition);
+  transition: all var(--transition);
 }
-.faq-item:has(.faq-question[aria-expanded="true"]) { border-color: var(--or-300); background: var(--or-50); }
+.faq-item:has(.faq-question[aria-expanded="true"]) { border-color: var(--or-300); background: rgba(254, 243, 199, 0.45); }
 
 .faq-question {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -989,7 +1056,7 @@ a.contact-value:hover { color: var(--or-600); }
   right: 32px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
   z-index: 999;
   opacity: 0;
   transform: translateY(20px);
@@ -1239,13 +1306,13 @@ a.contact-value:hover { color: var(--or-600); }
   .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
   .footer-legal { flex-wrap: wrap; justify-content: center; gap: 16px; }
 
-  /* Mobile bottom bar and shifts */
-  body { padding-bottom: 80px; }
-  .mobile-call-bar { display: block; }
-  .back-to-top { bottom: 92px; left: 16px; width: 50px; height: 50px; }
+  /* Header mobile adjustments */
+  .nav-inner { justify-content: space-between; gap: 16px; }
+  .btn-mobile-phone { display: flex; }
 
-  /* Floating */
-  .floating-cta { bottom: 92px; right: 16px; }
+  /* Floating and Scroll to Top */
+  .back-to-top { bottom: 24px; left: 16px; width: 50px; height: 50px; }
+  .floating-cta { bottom: 24px; right: 16px; }
   .float-btn { width: 50px; height: 50px; }
 }
 
@@ -1265,6 +1332,8 @@ a.contact-value:hover { color: var(--or-600); }
   .nav-inner { height: 60px; }
   .logo-name { font-size: 17px; }
   .logo-sub { display: none; }
+  .btn-mobile-phone span { display: none; }
+  .btn-mobile-phone { padding: 10px; border-radius: 50%; width: 42px; height: 42px; justify-content: center; align-items: center; }
   .about-facts { grid-template-columns: repeat(2, 1fr); }
   .section-desc { font-size: 15px; }
   .process-step { grid-template-columns: 48px 1fr; gap: 12px; }
@@ -1274,7 +1343,7 @@ a.contact-value:hover { color: var(--or-600); }
   .contact-phone-link { font-size: 22px; }
   .reviews-rating { padding: 16px; }
   .rating-num { font-size: 40px; }
-  .floating-cta { gap: 8px; }
+  .floating-cta { gap: 24px; }
 }
 
 /* --- Extra small: up to 360px --- */
