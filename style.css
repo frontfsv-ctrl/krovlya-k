@@ -280,11 +280,9 @@ input, select, textarea { font: inherit; }
    ============================================ */
 .mobile-call-bar {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+  position: relative;
+  width: 100%;
+  z-index: 998;
   background: linear-gradient(90deg, var(--or-600) 0%, var(--or-700) 100%);
   color: var(--white);
   text-decoration: none;
@@ -1465,8 +1463,8 @@ a.contact-value:hover { color: var(--or-600); }
     display: none;
   }
 
-  /* Hero */
-  .hero { padding-top: 72px; min-height: 100svh; }
+  /* Hero — padding accounts for: nav (72px) + call bar (~46px) = 118px */
+  .hero { padding-top: 118px; min-height: 100svh; }
   .hero-content { padding: 48px 0 40px; }
   .hero-title { font-size: clamp(28px, 8vw, 44px); }
   .hero-desc { font-size: 16px; }
@@ -1544,11 +1542,8 @@ a.contact-value:hover { color: var(--or-600); }
   .nav-inner { justify-content: space-between; gap: 16px; }
   /* Old circle phone btn hidden — replaced by call bar */
   .btn-mobile-phone { display: none !important; }
-  /* Show mobile call bar right below the 60px nav */
-  .mobile-call-bar { display: flex; top: 60px; }
-  /* Push hero down: nav 60px + call-bar ~46px = 106px */
-  .hero { padding-top: 106px !important; }
-
+  /* Show call bar (inside fixed header) on mobile */
+  .mobile-call-bar { display: flex; }
   /* Floating and Scroll to Top */
   .back-to-top { bottom: 24px; left: 16px; width: 50px; height: 50px; }
   .floating-cta { bottom: 24px; right: 16px; }
@@ -1560,6 +1555,8 @@ a.contact-value:hover { color: var(--or-600); }
   .container { padding: 0 14px; }
   .section { padding: 48px 0; }
   .section-title { font-size: 26px; }
+  /* Hero — padding accounts for: nav (60px) + call bar (~46px) = 106px */
+  .hero { padding-top: 106px; }
   .hero-title { font-size: clamp(30px, 8.5vw, 42px); }
   .hero-badge { font-size: 11px; padding: 6px 14px; }
   .calc-form-wrap { padding: 20px 16px; }
