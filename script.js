@@ -181,53 +181,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- FORM HANDLING ----
-  const form        = document.getElementById('contact-form');
-  const formSuccess = document.getElementById('form-success');
+  // ---- INTERACTIVE CALCULATOR ----
+  const calcBox = document.getElementById('calc-box');
+  if (calcBox) {
+    const typeButtons = calcBox.querySelectorAll('.calc-type-btn');
+    const areaRange = document.getElementById('calc-area-range');
+    const areaVal = document.getElementById('calc-area-val');
+    const demoCheckbox = document.getElementById('calc-demolition');
+    const insCheckbox = document.getElementById('calc-insulation');
+    const totalPriceDisplay = document.getElementById('calc-total-price');
 
-  if (form) {
-    // Phone mask
-    const phoneInput = document.getElementById('form-phone');
-    if (phoneInput) {
-      phoneInput.addEventListener('input', e => {
-        let v = e.target.value.replace(/\D/g, '');
-        if (v.startsWith('8') || v.startsWith('7')) v = '7' + v.slice(1);
-        if (!v.startsWith('7')) v = '7' + v;
-        let f = '+7';
-        if (v.length > 1) f += ' (' + v.slice(1, 4);
-        if (v.length >= 4) f += ') ' + v.slice(4, 7);
-        if (v.length >= 7) f += '-' + v.slice(7, 9);
-        if (v.length >= 9) f += '-' + v.slice(9, 11);
-        e.target.value = f;
-      });
+    function calculatePrice() {
+      const activeBtn = calcBox.querySelector('.calc-type-btn.active');
+      if (!activeBtn) return;
+      
+      const basePriceSqM = parseFloat(activeBtn.dataset.price) || 0;
+      const demoCostSqM = demoCheckbox.checked ? parseFloat(demoCheckbox.value) : 0;
+      const insCostSqM = insCheckbox.checked ? parseFloat(insCheckbox.value) : 0;
+      const area = parseInt(areaRange.value) || 0;
+
+      const totalSqMPrice = basePriceSqM + demoCostSqM + insCostSqM;
+      const totalCost = totalSqMPrice * area;
+
+      totalPriceDisplay.textContent = totalCost.toLocaleString('ru-RU') + ' ₽';
     }
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const name  = document.getElementById('form-name').value.trim();
-      const phone = document.getElementById('form-phone').value.trim();
-
-      let valid = true;
-      [{ el: document.getElementById('form-name'), check: !!name },
-       { el: phoneInput, check: phone.length >= 16 }].forEach(({ el, check }) => {
-        if (!check) {
-          valid = false;
-          el.style.borderColor = '#ef4444';
-          el.style.animation = 'shake 0.4s ease';
-          setTimeout(() => { el.style.animation = ''; el.style.borderColor = ''; }, 600);
-        }
+    typeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        calculatePrice();
       });
-      if (!valid) return;
-
-      const submitBtn = document.getElementById('form-submit');
-      submitBtn.textContent = 'Отправляем…';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        form.style.display = 'none';
-        formSuccess.style.display = 'block';
-      }, 1200);
     });
+
+    areaRange.addEventListener('input', (e) => {
+      areaVal.textContent = e.target.value;
+      calculatePrice();
+    });
+
+    demoCheckbox.addEventListener('change', calculatePrice);
+    insCheckbox.addEventListener('change', calculatePrice);
+
+    // Initial calculation
+    calculatePrice();
   }
 
   // ---- SMOOTH SCROLL ----

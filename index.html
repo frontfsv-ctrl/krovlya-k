@@ -45,21 +45,14 @@
             <div class="logo-icon">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="40" height="40" rx="9" fill="url(#logoGrad)"/>
-                <!-- Flat roof house -->
-                <!-- Roof slab (flat, wide) -->
-                <rect x="6" y="13" width="28" height="4" rx="1" fill="white"/>
-                <!-- Left chimney-like parapet -->
-                <rect x="6" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
-                <!-- Right parapet -->
-                <rect x="30" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
-                <!-- House body -->
-                <rect x="8" y="17" width="24" height="12" rx="1" fill="white" opacity="0.9"/>
-                <!-- Door -->
-                <rect x="17" y="22" width="6" height="7" rx="1" fill="url(#logoGrad)"/>
-                <!-- Window left -->
-                <rect x="10" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad)" opacity="0.7"/>
-                <!-- Window right -->
-                <rect x="25" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad)" opacity="0.7"/>
+                <!-- Flat roof line (bold and clean) -->
+                <rect x="6" y="12" width="28" height="3.5" rx="1" fill="white"/>
+                <!-- Modern building structure -->
+                <path d="M9 15.5H31V30.5C31 31.3 30.3 32 29.5 32H10.5C9.7 32 9 31.3 9 30.5V15.5Z" fill="white" opacity="0.9"/>
+                <!-- Architectural glass window panels (vertical divisions) -->
+                <line x1="15" y1="18" x2="15" y2="29" stroke="url(#logoGrad)" stroke-width="1.5"/>
+                <line x1="25" y1="18" x2="25" y2="29" stroke="url(#logoGrad)" stroke-width="1.5"/>
+                <line x1="9" y1="23" x2="31" y2="23" stroke="url(#logoGrad)" stroke-width="1"/>
                 <defs>
                   <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
                     <stop offset="0%" stop-color="#f97316"/>
@@ -192,7 +185,7 @@
       <div class="section-header">
         <span class="section-tag">Что мы делаем</span>
         <h2 class="section-title">Наши услуги</h2>
-        <p class="section-desc">Полный спектр работ с плоскими кровлями — от проектирования до гарантийного обслуживания</p>
+        <p class="section-desc">Проектирование, монтаж и ремонт плоских кровель из долговечной ПВХ-мембраны. Используем современное сварочное оборудование горячего воздуха Varimat.</p>
       </div>
       <div class="services-grid">
         <div class="service-card" id="service-installation">
@@ -202,8 +195,8 @@
           </div>
           <div class="service-card-body">
             <div class="service-num">01</div>
-            <h3 class="service-title">Монтаж плоской кровли</h3>
-            <p class="service-desc">Устройство кровельного пирога под ключ: пароизоляция, теплоизоляция, гидроизоляция. Любая площадь и сложность.</p>
+            <h3 class="service-title">Монтаж ПВХ-мембраны</h3>
+            <p class="service-desc">Профессиональный монтаж многослойного кровельного пирога с гидроизоляцией из полимерной ПВХ-мембраны. Сварка швов горячим воздухом (600°C) с помощью автоматов Varimat.</p>
             <ul class="service-features">
               <li>Неэксплуатируемая кровля</li>
               <li>Эксплуатируемая терраса</li>
@@ -587,39 +580,69 @@
           </div>
         </div>
         <div class="calc-form-wrap">
-          <form class="calc-form" id="contact-form" novalidate>
-            <h3>Получить расчёт</h3>
-            <div class="form-group">
-              <label for="form-name">Ваше имя *</label>
-              <input type="text" id="form-name" name="name" placeholder="Иван Иванов" required>
+          <div class="calc-box" id="calc-box">
+            <h3>Калькулятор стоимости</h3>
+            
+            <!-- Object Type Selection -->
+            <div class="calc-group">
+              <label class="calc-label">Тип объекта</label>
+              <div class="calc-type-grid">
+                <button type="button" class="calc-type-btn active" data-type="house" data-price="2500">
+                  <span class="type-icon">🏡</span>
+                  <span class="type-name">Частный дом</span>
+                </button>
+                <button type="button" class="calc-type-btn" data-type="terrace" data-price="3500">
+                  <span class="type-icon">🌅</span>
+                  <span class="type-name">Терраса</span>
+                </button>
+                <button type="button" class="calc-type-btn" data-type="commercial" data-price="1800">
+                  <span class="type-icon">🏬</span>
+                  <span class="type-name">Коммерция</span>
+                </button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="form-phone">Телефон *</label>
-              <input type="tel" id="form-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+            <!-- Area Slider -->
+            <div class="calc-group">
+              <div class="calc-slider-header">
+                <label class="calc-label">Площадь кровли</label>
+                <span class="calc-value-display"><span id="calc-area-val">150</span> м²</span>
+              </div>
+              <input type="range" id="calc-area-range" min="30" max="3000" step="10" value="150" class="calc-range-input">
+              <div class="calc-range-limits">
+                <span>30 м²</span>
+                <span>3 000 м²</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="form-area">Площадь кровли (м²)</label>
-              <input type="number" id="form-area" name="area" placeholder="Например: 150">
+
+            <!-- Additional Options -->
+            <div class="calc-group">
+              <label class="calc-label">Дополнительные работы</label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" id="calc-demolition" value="500">
+                <span class="calc-checkbox-custom"></span>
+                <span class="calc-checkbox-text">Требуется демонтаж старого покрытия (+500 ₽/м²)</span>
+              </label>
+              <label class="calc-checkbox-label" style="margin-top: 12px;">
+                <input type="checkbox" id="calc-insulation" value="700" checked>
+                <span class="calc-checkbox-custom"></span>
+                <span class="calc-checkbox-text">Утепление PIR плитами ТехноНиколь (+700 ₽/м²)</span>
+              </label>
             </div>
-            <div class="form-group">
-              <label for="form-type">Тип работ</label>
-              <select id="form-type" name="type">
-                <option value="">Выберите тип работ</option>
-                <option value="install">Монтаж новой кровли</option>
-                <option value="repair">Ремонт кровли</option>
-                <option value="terrace">Кровля-терраса</option>
-                <option value="inspect">Диагностика</option>
-              </select>
+
+            <!-- Summary -->
+            <div class="calc-summary">
+              <div class="summary-row">
+                <span>Ориентировочная стоимость:</span>
+                <strong id="calc-total-price">555 000 ₽</strong>
+              </div>
+              <p class="summary-note">*Окончательная смета формируется после замера инженером</p>
             </div>
-            <button type="submit" class="btn-primary btn-full" id="form-submit">
-              <span>Отправить заявку</span>
-            </button>
-            <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
-          </form>
-          <div class="form-success" id="form-success" style="display:none;">
-            <div class="success-icon">✓</div>
-            <h3>Заявка отправлена!</h3>
-            <p>Мы перезвоним вам в течение 30 минут</p>
+
+            <!-- CTA Call Button -->
+            <a href="tel:+79015760750" class="btn-primary btn-full calc-submit-btn">
+              <span>Заказать выезд бесплатно</span>
+            </a>
           </div>
         </div>
       </div>
@@ -810,13 +833,14 @@
             <div class="logo-icon">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                 <rect width="40" height="40" rx="9" fill="url(#logoGrad2)"/>
-                <rect x="6" y="13" width="28" height="4" rx="1" fill="white"/>
-                <rect x="6" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
-                <rect x="30" y="10" width="4" height="3" rx="0.5" fill="white" opacity="0.7"/>
-                <rect x="8" y="17" width="24" height="12" rx="1" fill="white" opacity="0.9"/>
-                <rect x="17" y="22" width="6" height="7" rx="1" fill="url(#logoGrad2)"/>
-                <rect x="10" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad2)" opacity="0.7"/>
-                <rect x="25" y="20" width="5" height="4" rx="0.5" fill="url(#logoGrad2)" opacity="0.7"/>
+                <!-- Flat roof line -->
+                <rect x="6" y="12" width="28" height="3.5" rx="1" fill="white"/>
+                <!-- Modern building structure -->
+                <path d="M9 15.5H31V30.5C31 31.3 30.3 32 29.5 32H10.5C9.7 32 9 31.3 9 30.5V15.5Z" fill="white" opacity="0.9"/>
+                <!-- Vertical window lines -->
+                <line x1="15" y1="18" x2="15" y2="29" stroke="url(#logoGrad2)" stroke-width="1.5"/>
+                <line x1="25" y1="18" x2="25" y2="29" stroke="url(#logoGrad2)" stroke-width="1.5"/>
+                <line x1="9" y1="23" x2="31" y2="23" stroke="url(#logoGrad2)" stroke-width="1"/>
                 <defs>
                   <linearGradient id="logoGrad2" x1="0" y1="0" x2="40" y2="40">
                     <stop offset="0%" stop-color="#f97316"/>
