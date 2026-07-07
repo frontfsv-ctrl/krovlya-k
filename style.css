@@ -270,10 +270,64 @@ input, select, textarea { font: inherit; }
 }
 .btn-primary:hover::after, .btn-ghost:hover::after, .btn-nav:hover::after, .btn-mobile-phone:hover::after {
   left: 180%;
-  transition: left 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: left 3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .btn-full { width: 100%; justify-content: center; }
+
+/* ============================================
+   MOBILE CALL BAR (below header, mobile only)
+   ============================================ */
+.mobile-call-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(90deg, var(--or-600) 0%, var(--or-700) 100%);
+  color: var(--white);
+  text-decoration: none;
+  padding: 13px 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+  overflow: hidden;
+}
+.mobile-call-bar::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(25deg);
+  animation: callBarSheen 4s cubic-bezier(0.19,1,0.22,1) 2s infinite;
+  pointer-events: none;
+}
+@keyframes callBarSheen {
+  0%   { left: -100%; }
+  40%  { left: 180%; }
+  100% { left: 180%; }
+}
+.call-bar-label {
+  opacity: 0.88;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.call-bar-number {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
 
 /* ============================================
    HEADER
@@ -862,7 +916,15 @@ input, select, textarea { font: inherit; }
 }
 .calc-type-btn .type-icon {
   font-size: 22px;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition);
 }
+.calc-type-btn:hover .type-icon { color: var(--or-400); }
+.calc-type-btn.active .type-icon { color: var(--or-500); }
+.calc-type-btn .type-icon svg { display: block; }
 .calc-type-btn .type-name {
   font-family: var(--font-main);
   font-size: 11px;
@@ -1480,7 +1542,12 @@ a.contact-value:hover { color: var(--or-600); }
 
   /* Header mobile adjustments */
   .nav-inner { justify-content: space-between; gap: 16px; }
-  .btn-mobile-phone { display: flex; }
+  /* Old circle phone btn hidden — replaced by call bar */
+  .btn-mobile-phone { display: none !important; }
+  /* Show mobile call bar right below the 60px nav */
+  .mobile-call-bar { display: flex; top: 60px; }
+  /* Push hero down: nav 60px + call-bar ~46px = 106px */
+  .hero { padding-top: 106px !important; }
 
   /* Floating and Scroll to Top */
   .back-to-top { bottom: 24px; left: 16px; width: 50px; height: 50px; }
@@ -1493,7 +1560,7 @@ a.contact-value:hover { color: var(--or-600); }
   .container { padding: 0 14px; }
   .section { padding: 48px 0; }
   .section-title { font-size: 26px; }
-  .hero-title { font-size: clamp(26px, 7vw, 36px); }
+  .hero-title { font-size: clamp(30px, 8.5vw, 42px); }
   .hero-badge { font-size: 11px; padding: 6px 14px; }
   .calc-form-wrap { padding: 20px 16px; }
   .portfolio-grid { grid-template-columns: 1fr; }
@@ -1504,8 +1571,8 @@ a.contact-value:hover { color: var(--or-600); }
   .nav-inner { height: 60px; }
   .logo-name { font-size: 17px; }
   .logo-sub { display: none; }
-  .btn-mobile-phone span { display: none; }
-  .btn-mobile-phone { padding: 10px; border-radius: 50%; width: 42px; height: 42px; justify-content: center; align-items: center; }
+  /* Hide old mobile circle btn styles on small phones */
+  .btn-mobile-phone { display: none !important; }
   .about-facts { grid-template-columns: repeat(2, 1fr); }
   .section-desc { font-size: 15px; }
   .process-step { grid-template-columns: 48px 1fr; gap: 12px; }
