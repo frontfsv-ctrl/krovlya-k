@@ -284,13 +284,14 @@ input, select, textarea { font: inherit; }
 
 /* 3D Logo image in nav */
 .logo-3d-img {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 51px;
+  height: 51px;
+  border-radius: 11px;
   object-fit: cover;
   object-position: center 60%;
   display: block;
-  box-shadow: 0 2px 12px rgba(234,88,12,0.3);
+  box-shadow: 0 2px 16px rgba(234,88,12,0.35);
+  flex-shrink: 0;
 }
 
 /* ============================================
@@ -1447,8 +1448,8 @@ a.contact-value:hover { color: var(--or-600); }
     display: none;
   }
 
-  /* Hero — nav(72px) + call-bar(44px) = 116px */
-  .hero { padding-top: 116px; min-height: 100svh; }
+  /* Hero — nav(72px) + call-bar(66px) = 138px */
+  .hero { padding-top: 138px; min-height: 100svh; }
   .hero-content { padding: 48px 0 40px; }
   .hero-title { font-size: clamp(28px, 8vw, 44px); }
   .hero-desc { font-size: 16px; }
@@ -1524,10 +1525,24 @@ a.contact-value:hover { color: var(--or-600); }
   .footer-legal { flex-wrap: wrap; justify-content: center; gap: 16px; }
 
   /* Header mobile adjustments */
-  .nav-inner { justify-content: space-between; gap: 16px; }
+  .nav-inner {
+    justify-content: space-between;
+    gap: 0;
+    position: relative; /* needed for centered logo-text */
+  }
   .btn-mobile-phone { display: none !important; }
 
-  /* MOBILE CALL BAR — fixed thin orange strip below nav */
+  /* Center company name in mobile header */
+  .logo-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+  }
+  .logo { gap: 0; } /* icon sits at left edge, text is centered absolutely */
+
+  /* MOBILE CALL BAR — fixed orange strip below nav, 66px tall */
   .mobile-call-bar {
     display: flex !important;
     position: fixed !important;
@@ -1535,20 +1550,42 @@ a.contact-value:hover { color: var(--or-600); }
     left: 0 !important;
     right: 0 !important;
     z-index: 1200 !important;
-    height: 44px !important;
-    min-height: 44px !important;
-    max-height: 44px !important;
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
     background: linear-gradient(90deg, #ea580c 0%, #c2410c 100%) !important;
     color: #ffffff !important;
     text-decoration: none !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 10px !important;
-    padding: 0 16px !important;
+    gap: 12px !important;
+    padding: 0 20px !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
-    box-shadow: 0 3px 16px rgba(234,88,12,0.55) !important;
+    box-shadow: 0 4px 22px rgba(234,88,12,0.6) !important;
   }
+  /* Glass sheen animation on call bar — slow, repeats every ~3s pause */
+  .mobile-call-bar::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -110%;
+    width: 45%;
+    height: 220%;
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.30) 50%,
+      rgba(255,255,255,0) 100%
+    );
+    transform: rotate(22deg);
+    animation: mobileCallSheen 5s cubic-bezier(0.19, 1, 0.22, 1) 3s infinite;
+    pointer-events: none;
+  }
+  /* Text sizes inside call bar — proportionally bigger for 66px bar */
+  .mobile-call-bar svg { width: 20px !important; height: 20px !important; }
+  .mobile-call-bar span:first-of-type { font-size: 15px !important; }
+  .mobile-call-bar span:last-of-type  { font-size: 22px !important; font-weight: 900 !important; }
 
   /* Floating and Scroll to Top */
   .back-to-top { bottom: 24px; left: 16px; width: 50px; height: 50px; }
@@ -1556,15 +1593,22 @@ a.contact-value:hover { color: var(--or-600); }
   .float-btn { width: 50px; height: 50px; }
 }
 
+/* Glass sheen keyframe for call bar */
+@keyframes mobileCallSheen {
+  0%   { left: -110%; }
+  35%  { left: 180%; }
+  100% { left: 180%; }
+}
+
 /* --- Small mobile: up to 480px --- */
 @media (max-width: 480px) {
   .container { padding: 0 14px; }
   .section { padding: 48px 0; }
   .section-title { font-size: 26px; }
-  /* Hero — nav(60px) + call-bar(44px) = 104px on small phones */
-  .hero { padding-top: 104px; }
-  /* On 480px screens nav height is 60px, so call bar starts at 60px */
-  .mobile-call-bar { top: 60px !important; }
+  /* Hero — nav(60px) + call-bar(66px) = 126px on small phones */
+  .hero { padding-top: 126px; }
+  /* On 480px screens nav height is 60px */
+  .mobile-call-bar { top: 60px !important; height: 66px !important; }
   .hero-title { font-size: clamp(30px, 8.5vw, 42px); }
   .hero-badge { font-size: 11px; padding: 6px 14px; }
   .calc-form-wrap { padding: 20px 16px; }
