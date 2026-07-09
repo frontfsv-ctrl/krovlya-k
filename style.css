@@ -1,5 +1,5 @@
 /* ============================================
-   КровляПро — FLAT ROOF WEBSITE
+   Кровля-К — FLAT ROOF WEBSITE
    Design System & Styles — WARM PALETTE
    ============================================ */
 
@@ -276,56 +276,57 @@ input, select, textarea { font: inherit; }
 .btn-full { width: 100%; justify-content: center; }
 
 /* ============================================
-   MOBILE CALL BAR (below header, mobile only)
+   MOBILE CALL BAR (fixed orange strip, mobile only)
    ============================================ */
 .mobile-call-bar {
+  /* Hidden by default on desktop */
   display: none;
-  position: relative;
-  width: 100%;
-  z-index: 998;
-  background: linear-gradient(90deg, var(--or-600) 0%, var(--or-700) 100%);
-  color: var(--white);
-  text-decoration: none;
-  padding: 13px 20px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-family: var(--font-main);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.01em;
-  box-shadow: 0 4px 20px rgba(249,115,22,0.35);
-  overflow: hidden;
 }
-.mobile-call-bar::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -100%;
-  width: 30%;
-  height: 200%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
-  transform: rotate(25deg);
-  animation: callBarSheen 4s cubic-bezier(0.19,1,0.22,1) 2s infinite;
-  pointer-events: none;
+
+@media (max-width: 768px) {
+  .mobile-call-bar {
+    display: flex !important;
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1100 !important;
+    width: 100% !important;
+    background: #ea580c !important;
+    background: linear-gradient(90deg, #ea580c 0%, #c2410c 100%) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 14px 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    font-family: var(--font-main) !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(234,88,12,0.5) !important;
+    overflow: hidden !important;
+  }
+  .mobile-call-bar::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 30%;
+    height: 200%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(25deg);
+    animation: callBarSheen 4s cubic-bezier(0.19,1,0.22,1) 2s infinite;
+    pointer-events: none;
+  }
 }
+
 @keyframes callBarSheen {
   0%   { left: -100%; }
   40%  { left: 180%; }
   100% { left: 180%; }
 }
-.call-bar-label {
-  opacity: 0.88;
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.call-bar-number {
-  font-size: 17px;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-}
+
 
 /* ============================================
    HEADER
@@ -703,6 +704,24 @@ input, select, textarea { font: inherit; }
 .award-icon { font-size: 32px; }
 .about-award strong { display: block; font-family: var(--font-main); font-size: 16px; font-weight: 800; color: var(--gray-900); }
 .about-award span { font-size: 12px; color: var(--gray-500); }
+
+/* 3D Logo card in About section */
+.about-logo3d {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 160px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 3px solid rgba(249,115,22,0.2);
+  background: #0c0a09;
+}
+.about-logo3d img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .about-content .section-title,
 .about-content .section-tag { text-align: left; }
@@ -1492,6 +1511,7 @@ a.contact-value:hover { color: var(--or-600); }
   .about-facts { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px; }
   .fact-num { font-size: 22px; }
   .about-certs { flex-direction: column; gap: 8px; }
+  .about-logo3d { display: none; }
 
   /* Why us */
   .why-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -1540,10 +1560,7 @@ a.contact-value:hover { color: var(--or-600); }
 
   /* Header mobile adjustments */
   .nav-inner { justify-content: space-between; gap: 16px; }
-  /* Old circle phone btn hidden — replaced by call bar */
   .btn-mobile-phone { display: none !important; }
-  /* Show call bar (inside fixed header) on mobile */
-  .mobile-call-bar { display: flex; }
   /* Floating and Scroll to Top */
   .back-to-top { bottom: 24px; left: 16px; width: 50px; height: 50px; }
   .floating-cta { bottom: 24px; right: 16px; }
@@ -1555,8 +1572,10 @@ a.contact-value:hover { color: var(--or-600); }
   .container { padding: 0 14px; }
   .section { padding: 48px 0; }
   .section-title { font-size: 26px; }
-  /* Hero — padding accounts for: nav (60px) + call bar (~46px) = 106px */
-  .hero { padding-top: 106px; }
+  /* Hero — nav(60px) + call-bar(48px) = 108px on small phones */
+  .hero { padding-top: 108px; }
+  /* call bar adjusts top to match 60px nav on 480px */
+  .mobile-call-bar { top: 60px !important; }
   .hero-title { font-size: clamp(30px, 8.5vw, 42px); }
   .hero-badge { font-size: 11px; padding: 6px 14px; }
   .calc-form-wrap { padding: 20px 16px; }
