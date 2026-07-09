@@ -288,7 +288,7 @@ input, select, textarea { font: inherit; }
   height: 51px;
   border-radius: 11px;
   object-fit: cover;
-  object-position: center 60%;
+  object-position: center center;
   display: block;
   box-shadow: 0 2px 16px rgba(234,88,12,0.35);
   flex-shrink: 0;
@@ -1540,6 +1540,7 @@ a.contact-value:hover { color: var(--or-600); }
     text-align: center;
     pointer-events: none;
   }
+  .logo-name { font-size: 22px; }
   .logo { gap: 0; } /* icon sits at left edge, text is centered absolutely */
 
   /* MOBILE CALL BAR — fixed orange strip below nav, 66px tall */
@@ -1618,7 +1619,7 @@ a.contact-value:hover { color: var(--or-600); }
   .footer-top > *:first-child { grid-column: span 1; }
   .footer-links-group { margin-bottom: 0; }
   .nav-inner { height: 60px; }
-  .logo-name { font-size: 17px; }
+  .logo-name { font-size: 20px; }
   .logo-sub { display: none; }
   /* Hide old mobile circle btn styles on small phones */
   .btn-mobile-phone { display: none !important; }
